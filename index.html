@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--==================== UNICONS ========================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!--==================== CSS ========================-->
+    <link rel="stylesheet" href="./style.css">
+    <title>Om's Portfolio</title>
+</head>
+
+<body>
+    <!--==================== HEADER ========================-->
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="" class="nav__logo">Om Achrekar</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class="uil uil-estate nav__icon"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i>About
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class="uil uil-file nav__icon"></i>Skills
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#projects" class="nav__link">
+                            <i class="uil uil-briefcase nav__icon"></i>Projects
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i>Contact
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
+
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ========================-->
+    <main class="main">
+        <!--==================== HOME ========================-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/achrekarom/" target="blank" class="home__social-icon">
+                            <i class="uil uil-linkedin-alt"></i>
+                        </a>
+                        <a href="https://github.com/achrekarom12" target="blank" class="home__social-icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                    </div>
+                    <div class="home__img">
+                        <img class="home__blob-img" src="my_image.jpg" />
+                    </div>
+                    <div class="home__data">
+                        <h1 class="home__title">Hi, I am Om Achrekar</h1>
+                        <h3 class="home__subtitle">B.E Undergraduate</h3>
+                        <p class="home__description">A passionate ML enthusiast with some Front-end skills and lots of eagerness to learn new things!</p>
+                        <a href="#contact" class="button button--flex">
+                        Contact Me<i class="uil uil-message button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== ABOUT ========================-->
+        <section class="about section" id="about">
+            <h2 class="section__title">About Me</h2>
+            <span class="section__subtitle">My Introduction</span>
+            <div class="about__container container">
+                <div class="about__data">
+                    <div style="display: flex; justify-content: center;">
+                        <p class="about__description" style="text-align: justify;">
+                            I am a third-year engineering student pursuing Computer Engineering from Vidyavardhini's College of Engineering & Technology, Vasai. I have a major interest in the Data Science and Machine Learning field.
+                        </p>
+                    </div>
+
+                    <div class="about__buttons" style="display: flex; justify-content: center;">
+                        <a download="" href="https://drive.google.com/file/d/10ZS1EV2FO_PJTdIvPqEHDkpwJ1GoerS6/view?usp=drive_link" class="button button--flex">
+                            Download Resume<i class="uil uil-folder-download button__icon"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!--==================== SKILLS ========================-->
+        <section class="skills section" id="skills">
+            <h2 class="section__title">Skills</h2>
+            <span class="section__subtitle">My technical level</span>
+            <div class="skills__container container grid">
+                <div>
+                    <!--==================== SKILL 1 ====================-->
+                    <div class="skills__content">
+                        <div class="skills__header">
+                            <i class="uil uil-robot skills__icon"></i>
+                            <div>
+                                <h1 class="skills__title">Machine Learning</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!--==================== SKILL 2 ====================-->
+                    <div class="skills__content">
+                        <div class="skills__header">
+                            <i class="uil uil-language skills__icon"></i>
+                            <div>
+                                <h1 class="skills__title">Natural Language Processing</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--==================== SKILL 3 ====================-->
+                    <div class="skills__content">
+                        <div class="skills__header">
+                            <i class="uil uil-html5 skills__icon"></i>
+                            <div>
+                                <h1 class="skills__title">Front-end Development</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!--==================== SKILL 4 ====================-->
+                    <div class="skills__content">
+                        <div class="skills__header">
+
+                            <div>
+                                <h1 class="skills__title"></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="skills__content">
+                        <div class="skills__header" style="align-items: right; ">
+                            <i class="uil uil-robot skills__icon"></i>
+                            <div>
+                                <h1 class="skills__title">Deep Learning</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!--==================== SKILL 1 ====================-->
+                    <div class="skills__content">
+                        <div class="skills__header">
+                            <i class="uil uil-brackets-curly skills__icon"></i>
+                            <div>
+                                <h1 class="skills__title">Data Science</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!--==================== SKILL 2 ====================-->
+                    <div class="skills__content">
+                        <div class="skills__header">
+                            <i class="uil uil-sitemap skills__icon"></i>
+                            <div>
+                                <h1 class="skills__title">DSA</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--==================== SKILL 2 ====================-->
+                <!-- <div class="skills__content">
+                        <div class="skills__header">
+                            <i class="uil uil-sitemap skills__icon"></i>
+                            <div>
+                                <h1 class="skills__title">Data Structures and Algorithms</h1>
+                            </div>
+                        </div>
+                    </div> -->
+                <!--==================== SKILL 3 ====================-->
+                <!-- <div class="skills__content">
+                        <div class="skills__header">
+                            <i class="uil uil-html5 skills__icon"></i>
+                            <div>
+                                <h1 class="skills__title">Front-end Development</h1>
+                            </div>
+                        </div>
+                    </div> -->
+                <!--==================== SKILL 4 ====================-->
+
+            </div>
+            </div>
+        </section>
+
+
+        <!--==================== QUALIFICATIONS ========================-->
+        <section class="qualification section">
+            <h2 class="section__title">Qualifications</h2>
+            <span class="section__subtitle">My personal Journey</span>
+            <div class="qualification__container container">
+                <div class="qualification__tabs">
+                    <div class="qualification__button qualification__active">
+                        <i class="uil uil-graduation-cap qualification__icon"></i> Education
+                    </div>
+                </div>
+                <div class="qualification__sections">
+                    <!--=============== QUALIFICATION CONTENT 1 ====================-->
+                    <div class="qualification__content qualification__active" data-content id="education">
+                        <!--=============== QUALIFICATION 1 ====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Bachelor of Engineering</h3>
+                                <span class="qualification__subtitle">Computer Engineering</span>
+                                <span class="qualification__subtitle">Vidyavardhini's College of Engineering and Technology, Vasai</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calender"></i> 2020-2024
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+                        <!--=============== QUALIFICATION 2 ====================-->
+                        <div class="qualification__data">
+                            <div></div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                            <div>
+                                <h3 class="qualification__title">Higher Secondary School Certificate</h3>
+                                <span class="qualification__subtitle">PCM with CS</span>
+                                <span class="qualification__subtitle">SS & LS Patkar College of Arts and Science and V R Varde College of Commerce and Economics, Goregaon</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calender"></i> 2020
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--=============== QUALIFICATION CONTENT 2 ====================-->
+                    <div class="qualification__content qualification__active" data-content id="work">
+                        <!--=============== QUALIFICATION 1 ====================-->
+                        <div class="qualification__data">
+                            <div>
+                                <h3 class="qualification__title">Secondary School Certificate</h3>
+                                <span class="qualification__subtitle">VPM's Vidya Mandir, Dahisar</span>
+                                <div class="qualification__calender">
+                                    <i class="uil uil-calender"></i> 2021
+                                </div>
+                            </div>
+                            <div>
+                                <span class="qualification__rounder"></span>
+                                <span class="qualification__line"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!--==================== PROJECTS ========================-->
+        <section class="projects section" id="projects">
+            <h2 class="section__title">Projects</h2>
+            <span class="section__subtitle">My works</span>
+            <div class="projects__container container grid">
+                <!--==================== PROJECT 1 ========================-->
+                <div class="projects__content">
+                    <div>
+                        <i class="uil uil-window-grid projects__icon"></i>
+                        <h3 class="projects__title">Open Source Contribution<br></h3>
+                    </div>
+                    <span class="button button--flex button--small button--link projects__button">
+                        View More
+                        <i class="uil uil-arrow-right"></i>
+                    </span>
+                    <div class="projects__modal">
+                        <div class="projects__modal-content">
+                            <h4 class="projects__modal-title">Open Source Contribution</h4>
+                            <p>SSoC '23 Contributor</p><br>
+                            <i class="uil uil-times projects__modal-close"></i>
+                            <table class="projects__modal-projects grid">
+                                <tr>
+                                    <td>
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                    </td>
+
+                                    <td>
+                                        <a>Children vs Adult Classification using DL</a>
+
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="projects__modal-projects grid">
+                                <tr>
+                                    <td>
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                    </td>
+
+                                    <td>
+                                        <a>Electron Microscopic Image Segmentation</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="projects__modal-projects grid">
+                                <tr>
+                                    <td>
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                    </td>
+
+                                    <td>
+                                        <a>Tweet Analysis of Indian Political Parties</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="projects__modal-projects grid">
+                                <tr>
+                                    <td>
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                    </td>
+
+                                    <td>
+                                        <a>Sephora Products and Skincare Reviews using NLP</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="projects__modal-projects grid">
+                                <tr>
+                                    <td>
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                    </td>
+
+                                    <td>
+                                        <a>Sentiment Analysis Model</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="projects__modal-projects grid">
+                                <tr>
+                                    <td>
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                    </td>
+
+                                    <td>
+                                        <a>Human Action Recognition</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+                <!--==================== PROJECT 2 ========================-->
+                <div class="projects__content">
+                    <div>
+                        <i class="uil uil-window-grid projects__icon"></i>
+                        <h3 class="projects__title">Own Projects<br></h3>
+                    </div>
+                    <span class="button button--flex button--small button--link projects__button">
+                        View More
+                        <i class="uil uil-arrow-right"></i>
+                    </span>
+                    <div class="projects__modal">
+                        <div class="projects__modal-content">
+                            <h4 class="projects__modal-title">Own Projects</h4>
+                            <i class="uil uil-times projects__modal-close"></i>
+                            <ul class="projects__modal-projects grid">
+                                <li class="projects__modal-projects">
+
+                                    <div class="about__buttons">
+                                        <i class="uil uil-check-circle projects__modal-icon"></i>
+                                        <a href="https://github.com/achrekarom12/Coderunners_Datahack" style="color: rgb(159,161,173);" onmouseover="this.style.color='rgb(0, 75, 145)';" onmouseout="this.style.color='rgb(159,161,173)';">Car Resale Value Prediction using DL</a>
+
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="projects__modal-projects grid">
+                                <li class="projects__modal-projects">
+                                    <i class="uil uil-check-circle projects__modal-icon"></i>
+                                    <div class="about__buttons">
+
+                                        <a href="https://github.com/achrekarom12/tsechacks" style="color: rgb(159,161,173);" onmouseover="this.style.color='rgb(0, 75, 145)';" onmouseout="this.style.color='rgb(159,161,173)';">
+                                            Normal. A web application for disabled community
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="projects__modal-projects grid">
+                                <li class="projects__modal-projects">
+                                    <i class="uil uil-check-circle projects__modal-icon"></i>
+
+                                    <div class="about__buttons">
+                                        <a href="https://github.com/achrekarom12/mingle" style="color: rgb(159,161,173);" onmouseover="this.style.color='rgb(0, 75, 145)';" onmouseout="this.style.color='rgb(159,161,173)';">
+                                            Mingle. Blind dating app
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="projects__modal-projects grid">
+                                <li class="projects__modal-projects">
+                                    <i class="uil uil-check-circle projects__modal-icon"></i>
+
+                                    <div class="about__buttons">
+                                        <a href="https://github.com/achrekarom12/OpenAIChatBot" style="color: rgb(159,161,173);" onmouseover="this.style.color='rgb(0, 75, 145)';" onmouseout="this.style.color='rgb(159,161,173)';">
+                                            OpenAI Chatbot
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="projects__modal-projects grid">
+                                <li class="projects__modal-projects">
+                                    <i class="uil uil-check-circle projects__modal-icon"></i>
+
+                                    <div class="about__buttons">
+                                        <a href="https://github.com/achrekarom12/openessay.ai" style="color: rgb(159,161,173);" onmouseover="this.style.color='rgb(0, 75, 145)';" onmouseout="this.style.color='rgb(159,161,173)';">
+                                            OpenEssay.AI
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="projects__modal-projects grid">
+                                <li class="projects__modal-projects">
+                                    <i class="uil uil-check-circle projects__modal-icon"></i>
+
+                                    <div class="about__buttons">
+                                        <a href="https://github.com/achrekarom12/Hackanova-2.0" style="color: rgb(159,161,173);" onmouseover="this.style.color='rgb(0, 75, 145)';" onmouseout="this.style.color='rgb(159,161,173)';">
+                                            Code Tutor
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="projects__modal-projects grid">
+                                <li class="projects__modal-projects">
+                                    <i class="uil uil-check-circle projects__modal-icon"></i>
+
+                                    <div class="about__buttons">
+                                        <a href="https://github.com/achrekarom12/Self-Driving-Car" style="color: rgb(159,161,173);" onmouseover="this.style.color='rgb(0, 75, 145)';" onmouseout="this.style.color='rgb(159,161,173)';">
+                                            Self Driving Car using JS
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="projects__modal-projects grid">
+                                <li class="projects__modal-projects">
+                                    <i class="uil uil-check-circle projects__modal-icon"></i>
+
+                                    <div class="about__buttons">
+                                        <a href="https://github.com/achrekarom12/Metaverse-Web-App" style="color: rgb(159,161,173);" onmouseover="this.style.color='rgb(0, 75, 145)';" onmouseout="this.style.color='rgb(159,161,173)';">
+                                            Metaverse Web App
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="projects__modal-projects grid">
+                                <li class="projects__modal-projects">
+                                    <i class="uil uil-check-circle projects__modal-icon"></i>
+
+                                    <div class="about__buttons">
+                                        <a href="https://github.com/achrekarom12/ASL-Alphabets" style="color: rgb(159,161,173);" onmouseover="this.style.color='rgb(0, 75, 145)';" onmouseout="this.style.color='rgb(159,161,173)';">
+                                            American Sign Language Detection using OpenCV
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="projects__modal-projects grid">
+                                <li class="projects__modal-projects">
+                                    <i class="uil uil-check-circle projects__modal-icon"></i>
+
+                                    <div class="about__buttons">
+                                        <a href="https://github.com/achrekarom12/Metaverse-Web-App" style="color: rgb(159,161,173);" onmouseover="this.style.color='rgb(0, 75, 145)';" onmouseout="this.style.color='rgb(159,161,173)';">
+                                            Metaverse Web App
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="projects__modal-projects grid">
+                                <li class="projects__modal-projects">
+                                    <i class="uil uil-check-circle projects__modal-icon"></i>
+
+                                    <div class="about__buttons">
+                                        <a href="https://github.com/achrekarom12/Data-Analysis-of-Netflix" style="color: rgb(159,161,173);" onmouseover="this.style.color='rgb(0, 75, 145)';" onmouseout="this.style.color='rgb(159,161,173)';">
+                                            Netflix Data Analysis
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="projects__modal-projects grid">
+                                <li class="projects__modal-projects">
+                                    <i class="uil uil-check-circle projects__modal-icon"></i>
+
+                                    <div class="about__buttons">
+                                        <a href="https://github.com/achrekarom12/Brain-Tumour-Detection-using-CNN" style="color: rgb(159,161,173);" onmouseover="this.style.color='rgb(0, 75, 145)';" onmouseout="this.style.color='rgb(159,161,173)';">
+                                            Brain Tumor Detection using DL 
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="projects__modal-projects grid">
+                                <li class="projects__modal-projects">
+                                    <i class="uil uil-check-circle projects__modal-icon"></i>
+
+                                    <div class="about__buttons">
+                                        <a href="https://github.com/achrekarom12/Text-Utilities " style="color: rgb(159,161,173);" onmouseover="this.style.color='rgb(0, 75, 145)';" onmouseout="this.style.color='rgb(159,161,173)';">
+                                            Text Utilities
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="projects__modal-projects grid">
+                                <li class="projects__modal-projects">
+                                    <i class="uil uil-check-circle projects__modal-icon"></i>
+
+                                    <div class="about__buttons">
+                                        <a href="https://github.com/achrekarom12/HousePricePrediction  " style="color: rgb(159,161,173);" onmouseover="this.style.color='rgb(0, 75, 145)';" onmouseout="this.style.color='rgb(159,161,173)';">
+                                            House Price Prediction
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--==================== CONTACT ME ========================-->
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Contact Me</h2>
+            <span class="section__subtitle">Get in Touch</span>
+            <div class="contact__container container grid">
+                <div>
+                    <div class="contact__information">
+                        <i class="uil uil-envelope contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">Mail</h3>
+                            <span class="contact__subtitle">achrekarom@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="contact__information">
+                        <i class="uil uil-map-marker contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">Location</h3>
+                            <span class="contact__subtitle">Mumbai, India</span>
+                        </div>
+                    </div>
+                    <div class="contact__information">
+                        <i class="uil uil-graduation-cap contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title">Currently</h3>
+                            <span class="contact__subtitle">Vidyavardhini's College of Engineering and Technology, Vasai</span>
+                        </div>
+                    </div>
+                </div>
+                <form action="" class="contact__form grid">
+                    <div class="contact__inputs grid">
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Name</label>
+                            <input type="text" class="contact__input">
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Email</label>
+                            <input type="email" class="contact__input">
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Message</label>
+                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                        </div>
+                        <div>
+                            <a href="#" class="button button--flex">
+                            Send Message
+                            <i class="uil uil-message button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!--==================== FOOTER ========================-->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Om Achrekar</h1>
+                    <span class="footer__subtitle">BE Undergraduate</span><br><br>
+                    <a href="https://www.linkedin.com/in/achrekarom/" target="_blank" class="footer__social">
+                        <i class="uil uil-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/achrekarom12" target="_blank" class="footer__social">
+                        <i class="uil uil-github"></i>
+                    </a>
+                </div>
+                <div class="footer__socials">
+                   
+                </div>
+            </div>
+            <p class="footer__copy">&#169; By Om ❤️</p>
+        </div>
+    </footer>
+
+    <!--==================== SCROLL TOP ========================-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+
+    <!--==================== MAIN JS ========================-->
+    <script src="main.js"></script>
+</body>
+
+</html>
