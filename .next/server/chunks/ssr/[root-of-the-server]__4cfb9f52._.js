@@ -211,11 +211,14 @@ const Hero = ()=>{
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "w-80 h-80 rounded-full overflow-hidden shadow-2xl border-4 border-gray-700",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
-                                    src: "/my_image.jpg",
+                                    src: "./my_image.png",
                                     alt: "Om Achrekar",
                                     width: 320,
                                     height: 320,
                                     className: "w-full h-full object-cover",
+                                    style: {
+                                        objectPosition: 'center 30%'
+                                    },
                                     priority: true
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Hero.tsx",
@@ -445,8 +448,8 @@ const Skills = ()=>{
                 lineNumber: 23,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0)),
-            title: "Front-end Development",
-            description: "Creating beautiful and responsive user interfaces"
+            title: "Backend Development",
+            description: "Creating robust and scalable backend systems"
         },
         {
             icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {

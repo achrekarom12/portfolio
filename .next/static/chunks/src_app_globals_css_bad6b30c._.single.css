@@ -821,6 +821,10 @@
     margin-top: calc(var(--spacing) * 1);
   }
 
+  .mt-10 {
+    margin-top: calc(var(--spacing) * 10);
+  }
+
   .mr-2 {
     margin-right: calc(var(--spacing) * 2);
   }
@@ -1246,6 +1250,10 @@
 
   .object-cover {
     object-fit: cover;
+  }
+
+  .object-top {
+    object-position: top;
   }
 
   .p-2 {

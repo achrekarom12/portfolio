@@ -56,11 +56,12 @@ const Hero = () => {
             <div className="relative">
               <div className="w-80 h-80 rounded-full overflow-hidden shadow-2xl border-4 border-gray-700">
                 <Image
-                  src="/my_image.jpg"
+                  src="./my_image.png"
                   alt="Om Achrekar"
                   width={320}
                   height={320}
                   className="w-full h-full object-cover"
+                  style={{ objectPosition: 'center 30%' }}
                   priority
                 />
               </div>
