@@ -133,7 +133,7 @@ const Projects = () => {
       <div className="container-max section-padding">
         <div className="text-center mb-16">
           <h2 className="section-title">Projects</h2>
-          <p className="section-subtitle">Some projects I've worked on in my free time & open source contributions</p>
+          <p className="section-subtitle">Some projects I&apos;ve worked on in my free time & open source contributions</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
