@@ -21,7 +21,6 @@ export default function Home() {
 
             {/* Credits / Footer for Main Column */}
             <div className="text-center text-sm text-gray-500 py-4">
-              LinkedIn Clone - Portfolio by Om Achrekar
             </div>
           </main>
 

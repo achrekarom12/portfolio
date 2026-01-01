@@ -1,0 +1,81 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXmark, faLink, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
+interface ContactInfoModalProps {
+    isOpen: boolean;
+    onClose: () => void;
+}
+
+export default function ContactInfoModal({ isOpen, onClose }: ContactInfoModalProps) {
+    if (!isOpen) return null;
+
+    return (
+        <div className="fixed inset-0 bg-black/60 z-[60] flex items-center justify-center p-4 animate-fadeIn">
+            <div className="bg-white w-full max-w-[552px] max-h-[90vh] overflow-y-auto rounded-lg shadow-2xl flex flex-col">
+                {/* Header */}
+                <div className="flex justify-between items-center px-6 py-4 border-b border-gray-100">
+                    <h2 className="text-xl font-semibold text-gray-900">Om Achrekar</h2>
+                    <button
+                        onClick={onClose}
+                        className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-600 transition-colors"
+                    >
+                        <FontAwesomeIcon icon={faXmark} className="w-6 h-6" />
+                    </button>
+                </div>
+
+                {/* Body */}
+                <div className="p-6">
+                    <div className="flex justify-between items-start mb-6">
+                        <h3 className="text-lg font-semibold text-gray-900">Contact Info</h3>
+                        <button className="p-2 hover:bg-gray-100 rounded-full transition-colors -mr-2">
+                            <FontAwesomeIcon icon={faPenToSquare} className="text-gray-500 w-5 h-5" />
+                        </button>
+                    </div>
+
+                    <div className="space-y-6">
+                        {/* LinkedIn */}
+                        <div className="flex gap-4">
+                            <div className="mt-1">
+                                <FontAwesomeIcon icon={faLinkedin} className="w-6 h-6 text-gray-600" />
+                            </div>
+                            <div>
+                                <h4 className="text-base font-semibold text-gray-900">Your Profile</h4>
+                                <a href="https://linkedin.com/in/achrekarom" target="_blank" rel="noopener noreferrer" className="text-sm text-[#0a66c2] hover:underline block break-all">
+                                    linkedin.com/in/achrekarom
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* Website */}
+                        <div className="flex gap-4">
+                            <div className="mt-1">
+                                <FontAwesomeIcon icon={faLink} className="w-5 h-5 text-gray-600" />
+                            </div>
+                            <div>
+                                <h4 className="text-base font-semibold text-gray-900">Website</h4>
+                                <a href="https://itsom.dev" target="_blank" rel="noopener noreferrer" className="text-sm text-[#0a66c2] hover:underline block break-all">
+                                    https://itsom.dev <span className="text-gray-500 hover:no-underline">(Portfolio)</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* Email */}
+                        <div className="flex gap-4">
+                            <div className="mt-1">
+                                <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5 text-gray-600" />
+                            </div>
+                            <div>
+                                <h4 className="text-base font-semibold text-gray-900">Email</h4>
+                                <a href="mailto:achrekarom@gmail.com" className="text-sm text-[#0a66c2] hover:underline block break-all">
+                                    achrekarom@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}

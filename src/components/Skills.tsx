@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
+
 const Skills = () => {
   const skills = [
     "Machine Learning",
@@ -17,14 +20,11 @@ const Skills = () => {
       <div className="flex justify-between items-center mb-2">
         <h2 className="text-xl font-semibold text-gray-900">Skills</h2>
         <div className="flex gap-2">
-          <button className="p-2 hover:bg-gray-100 rounded-full transition-colors text-gray-600 font-semibold text-sm">
-            Demonstrate skills
-          </button>
           <button className="p-2 hover:bg-gray-100 rounded-full transition-colors">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false" className="text-gray-500"><path d="M21 13h-8v8h-2v-8H3v-2h8V3h2v8h8z"></path></svg>
           </button>
           <button className="p-2 hover:bg-gray-100 rounded-full transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false" className="text-gray-500"><path d="M21.13 2.86a3 3 0 00-4.17 0l-13 13L2 22l6.19-2 13-13a3 3 0 000-4.17zM6.76 19.5L4.5 20.24l.74-2.25L15.12 8 16 8.88 6.76 19.5zM18.88 11.76l-.88.88-2.64-2.64.88-.88a1 1 0 011.32 0l1.32 1.32a1 1 0 010 1.32z"></path></svg>
+            <FontAwesomeIcon icon={faPenToSquare} className="text-gray-500 w-6 h-6" />
           </button>
         </div>
       </div>

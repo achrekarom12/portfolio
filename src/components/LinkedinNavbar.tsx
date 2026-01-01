@@ -30,15 +30,15 @@ export default function LinkedinNavbar() {
 
                     {/* Search Bar - Desktop */}
                     <div className="hidden md:block relative w-[280px]">
-                        <div className={`absolute left-4 top-1/2 -translate-y-1/2 transition-opacity ${isFocused ? 'opacity-0' : 'opacity-100'}`}>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" width="24" height="24" focusable="false" className="w-5 h-5 fill-gray-600">
+                        <div className={`absolute left-4 top-1/2 -translate-y-1/2 transition-opacity'}`}>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" width="24" height="24" focusable="true" className="w-5 h-5 fill-gray-600">
                                 <path d="M21.41 18.59l-5.27-5.28A6.83 6.83 0 0017 10a7 7 0 10-7 7 6.83 6.83 0 003.31-1.09l5.28 5.27a2 2 0 002.82-2.82zM5 10a5 5 0 115 5 5 5 0 01-5-5z"></path>
                             </svg>
                         </div>
                         <input
                             type="text"
                             placeholder="Search"
-                            className={`bg-[#eef3f8] h-[34px] w-full rounded-md text-sm text-gray-900 placeholder-gray-600 focus:outline-none focus:bg-white focus:ring-2 focus:ring-black/10 transition-all duration-200 pl-10 pr-4 ${isFocused ? 'w-[380px] shadow-lg border border-black/10' : ''}`}
+                            className="bg-[#eef3f8] h-[34px] w-full rounded-full text-sm text-gray-900 placeholder-gray-600 border border-gray-200 pl-10 pr-4 transition-colors duration-200"
                             onFocus={() => setIsFocused(true)}
                             onBlur={() => setIsFocused(false)}
                         />
@@ -52,7 +52,7 @@ export default function LinkedinNavbar() {
                     </div>
                 </div>
 
-                <nav className="flex items-center h-full sm:space-x-1">
+                <nav className="flex items-center h-full sm:space-x-1 pt-2">
                     <NavItem
                         active={true}
                         label="Home"
@@ -76,7 +76,7 @@ export default function LinkedinNavbar() {
                     />
                     <div className="flex flex-col items-center justify-center cursor-pointer min-w-[80px] h-[52px] border-b-2 border-transparent text-gray-500 hover:text-black hover:fill-black ml-1 border-l border-gray-100 pl-2">
                         <div className="w-6 h-6 rounded-full bg-gray-300 overflow-hidden">
-                            <img src="/placeholder-avatar.jpg" alt="Me" className="w-full h-full object-cover" />
+                            <img src="/my_image.png" alt="Me" className="w-full h-full object-cover" />
                         </div>
                         <div className="flex items-center mt-0.5">
                             <span className="text-[12px]">Me</span>
