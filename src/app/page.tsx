@@ -1,23 +1,36 @@
-import Header from '@/components/Header'
-import Hero from '@/components/Hero'
+import LinkedinNavbar from '@/components/LinkedinNavbar'
+import ProfileHeader from '@/components/ProfileHeader'
 import About from '@/components/About'
+import Experience from '@/components/Experience'
 import Skills from '@/components/Skills'
-import Projects from '@/components/Projects'
-import Contact from '@/components/Contact'
-import Footer from '@/components/Footer'
-import ScrollToTop from '@/components/ScrollToTop'
+import Sidebar from '@/components/Sidebar'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Header />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-      <ScrollToTop />
-    </main>
+    <div className="min-h-screen bg-[#f3f2ef]">
+      <LinkedinNavbar />
+
+      <div className="container-max pt-[72px] pb-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+          {/* Main Content - Left Side */}
+          <main className="md:col-span-8 lg:col-span-9 space-y-2 sm:space-y-4">
+            <ProfileHeader />
+            <About />
+            <Experience />
+            <Skills />
+
+            {/* Credits / Footer for Main Column */}
+            <div className="text-center text-sm text-gray-500 py-4">
+              LinkedIn Clone - Portfolio by Om Achrekar
+            </div>
+          </main>
+
+          {/* Sidebar - Right Side */}
+          <aside className="hidden md:block md:col-span-4 lg:col-span-3 space-y-4">
+            <Sidebar />
+          </aside>
+        </div>
+      </div>
+    </div>
   )
 }

@@ -1,37 +1,17 @@
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gray-800">
-      <div className="container-max section-padding">
-        <div className="text-center mb-16">
-          <h2 className="section-title">About Me</h2>
-        </div>
-
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center">
-            <p className="text-lg text-gray-300 leading-relaxed mb-8 text-justify">
-            I am skilled in Machine Learning, C++, Java, Python, and Typescript, and I specialize in Deep Learning and
-Natural Language Processing. With a solid foundation in these technologies, I am passionate about
-developing innovative AI-driven solutions. My proficiency across multiple programming languages
-and expertise in advanced domains allow me to approach challenges creatively and contribute
-significantly to projects at the forefront of technology..
-            </p>
-
-            <div className="flex justify-center">
-              <a
-                href="https://drive.google.com/file/d/1EoKdiC797U4H1NY7C5w1Md0FxvOYTGKN/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
-                Download Resume
-                <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
+    <section className="linkedin-card p-5 sm:p-6 sm:pb-8 sm:pt-6">
+      <div className="flex justify-between items-center mb-3">
+        <h2 className="text-xl font-semibold text-gray-900">About</h2>
+        <button className="p-2 hover:bg-gray-100 rounded-full transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false" className="text-gray-500"><path d="M21.13 2.86a3 3 0 00-4.17 0l-13 13L2 22l6.19-2 13-13a3 3 0 000-4.17zM6.76 19.5L4.5 20.24l.74-2.25L15.12 8 16 8.88 6.76 19.5zM18.88 11.76l-.88.88-2.64-2.64.88-.88a1 1 0 011.32 0l1.32 1.32a1 1 0 010 1.32z"></path></svg>
+        </button>
       </div>
+      <p className="text-sm text-gray-900 leading-relaxed whitespace-pre-line">
+        I am skilled in Machine Learning, C++, Java, Python, and Typescript, and I specialize in Deep Learning and Natural Language Processing.
+        {'\n\n'}
+        With a solid foundation in these technologies, I am passionate about developing innovative AI-driven solutions. My proficiency across multiple programming languages and expertise in advanced domains allow me to approach challenges creatively and contribute significantly to projects at the forefront of technology.
+      </p>
     </section>
   )
 }
