@@ -2,6 +2,7 @@ import LinkedinNavbar from '@/components/LinkedinNavbar'
 import ProfileHeader from '@/components/ProfileHeader'
 import About from '@/components/About'
 import Experience from '@/components/Experience'
+import Education from '@/components/Education'
 import Skills from '@/components/Skills'
 import Sidebar from '@/components/Sidebar'
 
@@ -17,6 +18,7 @@ export default function Home() {
             <ProfileHeader />
             <About />
             <Experience />
+            <Education />
             <Skills />
 
             {/* Credits / Footer for Main Column */}

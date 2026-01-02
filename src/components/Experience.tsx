@@ -34,9 +34,9 @@ const CompanyExperience = ({ company, totalDuration, location, logo, roles }: Co
                     )}
                 </div>
                 {/* Line from Logo down to next row (only if multi-role) */}
-                {isMultiRole && (
+                {/* {isMultiRole && (
                     <div className="w-0.5 flex-1 bg-gray-200 mt-2 absolute top-10 bottom-0"></div>
-                )}
+                )} */}
             </div>
 
             <div className="pt-1.5 mb-2">
@@ -65,7 +65,7 @@ const CompanyExperience = ({ company, totalDuration, location, logo, roles }: Co
                     </div>
 
                     {/* Right Column: Role Content */}
-                    <div className={`pb-6 last:pb-0 ${!isMultiRole ? 'col-start-2' : ''}`}>
+                    <div className={`pb-6 last:pb-3 ${!isMultiRole ? 'col-start-2' : ''}`}>
                         <div className="flex flex-col">
                             <h4 className="text-sm font-bold text-gray-900 leading-5">{role.title}</h4>
                             <span className="text-sm text-gray-900">{role.type}</span>
