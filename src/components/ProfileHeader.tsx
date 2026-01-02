@@ -4,13 +4,16 @@ import Image from 'next/image';
 
 import { useState } from 'react';
 import ContactInfoModal from './ContactInfoModal';
+import OpenToModal from './OpenToModal';
 
 export default function ProfileHeader() {
     const [showContactInfo, setShowContactInfo] = useState(false);
+    const [showOpenToModal, setShowOpenToModal] = useState(false);
 
     return (
         <>
             <ContactInfoModal isOpen={showContactInfo} onClose={() => setShowContactInfo(false)} />
+            <OpenToModal isOpen={showOpenToModal} onClose={() => setShowOpenToModal(false)} />
             <section className="linkedin-card relative pt-[100px] sm:pt-[200px]">
                 {/* Banner Image */}
                 <div className="absolute top-0 left-0 w-full h-[150px] sm:h-[200px] overflow-hidden rounded-t-lg">
@@ -64,7 +67,7 @@ export default function ProfileHeader() {
                         </div>
 
                         <div className="flex flex-wrap gap-2 mt-4">
-                            <button className="btn-primary">Open to</button>
+                            <button className="btn-primary" onClick={() => setShowOpenToModal(true)}>Open to</button>
                             <button className="btn-secondary">Add profile section</button>
                             <button className="btn-tertiary">More</button>
                         </div>
