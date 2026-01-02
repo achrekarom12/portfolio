@@ -11,7 +11,7 @@ const About = () => {
         </button>
       </div>
       <p className="text-sm text-gray-900 leading-relaxed whitespace-pre-line">
-        I am skilled in Machine Learning, C++, Java, Python, and Typescript, and I specialize in Deep Learning and Natural Language Processing.
+        I am skilled in Typescript, Python, and C++, and I specialize in Backend Development and Agentic AI Systems.
         {'\n\n'}
         With a solid foundation in these technologies, I am passionate about developing innovative AI-driven solutions. My proficiency across multiple programming languages and expertise in advanced domains allow me to approach challenges creatively and contribute significantly to projects at the forefront of technology.
       </p>

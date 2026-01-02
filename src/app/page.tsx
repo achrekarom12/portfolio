@@ -25,7 +25,7 @@ export default function Home() {
           </main>
 
           {/* Sidebar - Right Side */}
-          <aside className="hidden md:block md:col-span-4 lg:col-span-3 space-y-4">
+          <aside className="md:col-span-4 lg:col-span-3 sm:space-y-4">
             <Sidebar />
           </aside>
         </div>

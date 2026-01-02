@@ -42,7 +42,7 @@ export default function ProfileHeader() {
                     </div>
 
                     <div className="mt-12 sm:mt-8">
-                        <div className="flex justify-between items-start">
+                        <div className="flex flex-col sm:flex-row justify-between items-start">
                             <div>
                                 <h1 className="text-2xl font-semibold text-gray-900 flex items-center gap-1">
                                     Om Achrekar
@@ -61,7 +61,7 @@ export default function ProfileHeader() {
                                 </div>
                             </div>
 
-                            <div className="hidden sm:flex flex-col gap-2">
+                            <div className="flex flex-col gap-2 mt-4 sm:mt-0">
                                 <div className="flex items-center gap-2 cursor-pointer hover:underline">
                                     <div className="w-6 h-6 rounded bg-gray-100 flex items-center justify-center">
                                         {/* Placeholder for company logo */}

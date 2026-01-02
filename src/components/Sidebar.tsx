@@ -18,7 +18,7 @@ const SidebarItem = ({ name, headline }: { name: string, headline: string }) => 
 
 export default function Sidebar() {
     return (
-        <div className="space-y-2 sticky top-[72px]">
+        <div className="space-y-2 md:sticky md:top-[72px]">
             <div className="linkedin-card p-4">
                 <div className="flex justify-between items-center mb-2">
                     <h2 className="text-base font-semibold text-gray-900">People also viewed</h2>
@@ -46,12 +46,9 @@ export default function Sidebar() {
                 <span className="hover:text-blue-600 hover:underline cursor-pointer">About</span>
                 <span className="hover:text-blue-600 hover:underline cursor-pointer">Accessibility</span>
                 <span className="hover:text-blue-600 hover:underline cursor-pointer">Help Center</span>
-                <span>Privacy & Terms</span>
+                <span className="hover:text-blue-600 hover:underline cursor-pointer">Privacy & Terms</span>
                 <span className="hover:text-blue-600 hover:underline cursor-pointer">Ad Choices</span>
-                <span>Advertising</span>
-            </div>
-            <div className="text-[12px] text-gray-900 text-center mt-2 pb-4">
-                LinkedIn Corporation © 2026
+                <span className="hover:text-blue-600 hover:underline cursor-pointer">Advertising</span>
             </div>
         </div>
     )

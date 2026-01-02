@@ -1,19 +1,31 @@
+"use client";
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
 
 const Skills = () => {
+  const [showAll, setShowAll] = useState(false);
+
   const skills = [
-    "Machine Learning",
-    "Natural Language Processing",
+    "TypeScript",
+    "Python",
     "Backend Development",
+    "Git",
+    "PostgreSQL",
+    "Docker",
+    "Kubernetes",
+    "Fastify",
+    "NestJS",
+    "FastAPI",
+    "Machine Learning",
+    "Data Structures and Algorithms",
+    "Natural Language Processing",
     "Deep Learning",
     "Data Science",
-    "Data Structures and Algorithms",
-    "React.js",
-    "Next.js",
-    "Python",
-    "TypeScript"
+    "System Design"
   ]
+
+  const displayedSkills = showAll ? skills : skills.slice(0, 3);
 
   return (
     <section className="linkedin-card p-5 sm:p-6 pb-2">
@@ -30,7 +42,7 @@ const Skills = () => {
       </div>
 
       <div className="">
-        {skills.slice(0, 3).map((skill, index) => (
+        {displayedSkills.map((skill, index) => (
           <div key={index} className="py-4 border-b border-gray-100 last:border-0 hover:bg-gray-50 px-4 -mx-4 cursor-pointer transition-colors">
             <h3 className="font-semibold text-gray-900 text-base">{skill}</h3>
             <div className="flex items-center gap-2 mt-1">
@@ -41,9 +53,23 @@ const Skills = () => {
       </div>
 
       <div className="border-t border-gray-100 mt-2">
-        <button className="w-full py-3 text-base font-semibold text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors flex items-center justify-center gap-1">
-          Show all {skills.length} skills
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" width="16" height="16" focusable="false"><path d="M8 12L12 8 11.29 7.29 8.5 10.08 8.5 1 7.5 1 7.5 10.08 4.71 7.29 4 8z"></path></svg>
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="w-full py-3 text-base font-semibold text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors flex items-center justify-center gap-1"
+        >
+          {showAll ? "Show less" : `Show all ${skills.length} skills`}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            data-supported-dps="16x16"
+            fill="currentColor"
+            width="16"
+            height="16"
+            focusable="false"
+            className={`transition-transform duration-200 ${showAll ? "rotate-180" : ""}`}
+          >
+            <path d="M8 12L12 8 11.29 7.29 8.5 10.08 8.5 1 7.5 1 7.5 10.08 4.71 7.29 4 8z"></path>
+          </svg>
         </button>
       </div>
     </section>
