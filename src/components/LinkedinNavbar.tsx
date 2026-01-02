@@ -140,7 +140,7 @@ export default function LinkedinNavbar() {
                                         </div>
                                     </div>
                                     <a
-                                        href="https://drive.google.com/uc?export=download&id=1zfY-kCXRgduxPF44ciWn11_w-ym3JWG5"
+                                        href={`https://drive.google.com/uc?export=download&id=${process.env.NEXT_PUBLIC_RESUME_ID}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="px-4 py-2 transition-colors cursor-pointer block"
