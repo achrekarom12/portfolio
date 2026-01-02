@@ -102,6 +102,26 @@ export default function BlogContent({ slug }: { slug: string }) {
                                 {activity.fullContent}
                             </ReactMarkdown>
                         </article>
+
+                        {/* Author Signature */}
+                        <div className="mt-20 mb-16 flex flex-col items-center">
+                            <div className="relative w-full flex justify-center items-center mb-4">
+                                <div className="absolute w-full h-[1px] bg-gray-200"></div>
+                                <div className="relative bg-white px-4">
+                                    <Image
+                                        src="/my_image.png"
+                                        alt="Om Achrekar"
+                                        width={80}
+                                        height={80}
+                                        className="rounded-full object-cover ring-4 ring-white"
+                                    />
+                                </div>
+                            </div>
+                            <div className="text-center">
+                                <h3 className="text-lg font-bold text-gray-900">Om Achrekar</h3>
+                                <p className="text-sm text-gray-500 mt-1">Software Development Engineer I</p>
+                            </div>
+                        </div>
                     </main>
                 </div>
             </div>
