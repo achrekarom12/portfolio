@@ -22,7 +22,7 @@ export default function ActivityFeed() {
                 {filters.map((filter) => (
                     <button
                         key={filter}
-                        className={`px-3 py-1 rounded-full text-sm font-semibold border transition-colors ${filter === 'Blogs' ? 'bg-[#057642] text-white border-transparent hover:bg-[#046338]' : 'text-[var(--text-dim)] border-[var(--text-dim)] hover:bg-[var(--bg-color)]'}`}
+                        className={`px-3 py-1 rounded-full text-sm font-semibold border transition-colors ${filter === 'Blogs' ? 'bg-[#057642] text-white border-transparent ' : 'text-[var(--text-dim)] border-[var(--text-dim)] '}`}
                     >
                         {filter}
                     </button>
@@ -44,7 +44,7 @@ export default function ActivityFeed() {
                                     />
                                     <div className="flex flex-col">
                                         <div className="flex items-center gap-1">
-                                            <span className="text-[14px] font-bold text-[var(--text-main)] hover:text-[#0a66c2] hover:underline cursor-pointer transition-colors">Om Achrekar</span>
+                                            <span className="text-[14px] font-bold text-[var(--text-main)] hover:text-[#71b7fb] hover:underline cursor-pointer transition-colors">Om Achrekar</span>
                                             <span className="text-[var(--text-dim)] text-[12px] font-normal transition-colors">• You</span>
                                         </div>
                                         <span className="text-[12px] font-normal leading-tight transition-colors">Software Development Engineer I</span>
@@ -53,14 +53,14 @@ export default function ActivityFeed() {
                                         </div>
                                     </div>
                                 </div>
-                                <button className="text-[var(--text-dim)] hover:bg-[var(--bg-color)] p-1.5 rounded-full transition-colors" onClick={(e) => e.preventDefault()}>
+                                <button className="text-[var(--text-dim)] p-1.5 rounded-full transition-colors" onClick={(e) => e.preventDefault()}>
                                     <FontAwesomeIcon icon={faEllipsisH} className="w-4 h-4" />
                                 </button>
                             </div>
 
                             <Link href={`/recent-activity/${activity.slug}`} className="block group">
                                 <div className="mt-2 mb-3 px-1 text-[14px]">
-                                    <h3 className="font-bold mb-1 text-[var(--text-main)] group-hover:text-[#0a66c2] group-hover:underline transition-colors">{activity.title}</h3>
+                                    <h3 className="font-bold mb-1 text-[var(--text-main)] group-hover:text-[#71b7fb] group-hover:underline transition-colors">{activity.title}</h3>
                                     <p className="text-[var(--text-main)] opacity-80 whitespace-pre-wrap line-clamp-3 transition-colors">{activity.content}</p>
                                 </div>
 
@@ -94,19 +94,19 @@ export default function ActivityFeed() {
                             </div>
 
                             <div className="flex justify-between mt-1 pt-1">
-                                <button className="flex-1 flex items-center justify-center gap-1.5 hover:bg-[var(--bg-color)] py-2.5 rounded transition-colors text-[var(--text-dim)] font-semibold group">
+                                <button className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded transition-colors text-[var(--text-dim)] font-semibold group">
                                     <FontAwesomeIcon icon={faThumbsUpReg} className="w-5 h-5 group-hover:text-[var(--text-main)] transition-colors" />
                                     <span className="text-sm group-hover:text-[var(--text-main)] transition-colors">Like</span>
                                 </button>
-                                <button className="flex-1 flex items-center justify-center gap-1.5 hover:bg-[var(--bg-color)] py-2.5 rounded transition-colors text-[var(--text-dim)] font-semibold group">
+                                <button className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded transition-colors text-[var(--text-dim)] font-semibold group">
                                     <FontAwesomeIcon icon={faCommentDotsReg} className="w-5 h-5 group-hover:text-[var(--text-main)] transition-colors" />
                                     <span className="text-sm group-hover:text-[var(--text-main)] transition-colors">Comment</span>
                                 </button>
-                                <button className="flex-1 flex items-center justify-center gap-1.5 hover:bg-[var(--bg-color)] py-2.5 rounded transition-colors text-[var(--text-dim)] font-semibold group">
+                                <button className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded transition-colors text-[var(--text-dim)] font-semibold group">
                                     <FontAwesomeIcon icon={faRetweet} className="w-5 h-5 group-hover:text-[var(--text-main)] transition-colors" />
                                     <span className="text-sm group-hover:text-[var(--text-main)] transition-colors">Repost</span>
                                 </button>
-                                <button className="flex-1 flex items-center justify-center gap-1.5 hover:bg-[var(--bg-color)] py-2.5 rounded transition-colors text-[var(--text-dim)] font-semibold group">
+                                <button className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded transition-colors text-[var(--text-dim)] font-semibold group">
                                     <FontAwesomeIcon icon={faPaperPlane} className="w-5 h-5 group-hover:text-[var(--text-main)] transition-colors" />
                                     <span className="text-sm group-hover:text-[var(--text-main)] transition-colors">Send</span>
                                 </button>

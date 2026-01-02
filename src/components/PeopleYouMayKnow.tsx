@@ -7,7 +7,7 @@ interface SidebarItemProps {
 }
 
 export const SidebarItem = ({ name, headline, showConnect = true }: SidebarItemProps) => (
-    <div className="flex gap-3 py-3 border-b border-[var(--divider)] last:border-0 hover:bg-[var(--bg-color)] px-4 -mx-4 cursor-pointer transition-colors group">
+    <div className="flex gap-3 py-3 border-b border-[var(--divider)] last:border-0 px-4 -mx-4 cursor-pointer transition-colors group">
         <div className="w-12 h-12 rounded-full bg-gray-300 flex-shrink-0 overflow-hidden relative">
             <div className="absolute inset-0 bg-[#dde7f1] flex items-center justify-center text-gray-500 font-bold text-lg">{name.charAt(0)}</div>
         </div>
@@ -15,7 +15,7 @@ export const SidebarItem = ({ name, headline, showConnect = true }: SidebarItemP
             <h3 className="text-sm font-semibold text-[var(--text-main)] transition-colors">{name}</h3>
             <p className="text-xs text-[var(--text-dim)] line-clamp-2 mt-0.5 transition-colors">{headline}</p>
             {showConnect && (
-                <button className="mt-2 text-sm text-[var(--text-dim)] border border-[var(--text-dim)] rounded-full px-4 py-1 hover:bg-[var(--bg-color)] hover:shadow-[inset_0_0_0_1px_var(--text-main)] font-semibold flex items-center justify-center gap-1 transition-all duration-200">
+                <button className="mt-2 text-sm text-[var(--text-dim)] border border-[var(--text-dim)] rounded-full px-4 py-1 hover:shadow-[inset_0_0_0_1px_var(--text-main)] font-semibold flex items-center justify-center gap-1 transition-all duration-200">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" width="16" height="16" focusable="false"><path d="M9 4a3 3 0 11-3-3 3 3 0 013 3zM6.75 8h-1.5A2.25 2.25 0 003 10.25V15h6v-4.75A2.25 2.25 0 006.75 8zM13 8V6h-1v2h-2v1h2v2h1V9h2V8z"></path></svg>
                     Connect
                 </button>

@@ -20,7 +20,7 @@ export default function Activity() {
             <div className="flex justify-between items-start mb-1">
                 <div>
                     <h2 className="text-xl font-semibold text-[var(--text-main)] transition-colors">Activity</h2>
-                    <p className="text-sm font-semibold text-[#0a66c2] hover:underline cursor-pointer">1,205 followers</p>
+                    <p className="text-sm font-semibold text-[#71b7fb] hover:underline cursor-pointer">1,205 followers</p>
                 </div>
             </div>
 
@@ -81,19 +81,19 @@ export default function Activity() {
                             </div>
 
                             <div className="flex justify-between text-[var(--text-dim)]">
-                                <button className="flex items-center gap-1.5 hover:bg-[var(--bg-color)] px-2 py-1.5 rounded transition-colors group">
+                                <button className="flex items-center gap-1.5 px-2 py-1.5 rounded transition-colors group">
                                     <FontAwesomeIcon icon={faThumbsUpReg} className="w-5 h-5 group-hover:text-[var(--text-main)]" />
                                     <span className="text-xs font-semibold group-hover:text-[var(--text-main)]">Like</span>
                                 </button>
-                                <button className="flex items-center gap-1.5 hover:bg-[var(--bg-color)] px-2 py-1.5 rounded transition-colors group">
+                                <button className="flex items-center gap-1.5 px-2 py-1.5 rounded transition-colors group">
                                     <FontAwesomeIcon icon={faCommentDotsReg} className="w-5 h-5 group-hover:text-[var(--text-main)]" />
                                     <span className="text-xs font-semibold group-hover:text-[var(--text-main)]">Comment</span>
                                 </button>
-                                <button className="flex items-center gap-1.5 hover:bg-[var(--bg-color)] px-2 py-1.5 rounded transition-colors group">
+                                <button className="flex items-center gap-1.5 px-2 py-1.5 rounded transition-colors group">
                                     <FontAwesomeIcon icon={faRetweet} className="w-5 h-5 group-hover:text-[var(--text-main)]" />
                                     <span className="text-xs font-semibold group-hover:text-[var(--text-main)]">Repost</span>
                                 </button>
-                                <button className="flex items-center gap-1.5 hover:bg-[var(--bg-color)] px-2 py-1.5 rounded transition-colors group">
+                                <button className="flex items-center gap-1.5 px-2 py-1.5 rounded transition-colors group">
                                     <FontAwesomeIcon icon={faPaperPlane} className="w-5 h-5 group-hover:text-[var(--text-main)]" />
                                     <span className="text-xs font-semibold group-hover:text-[var(--text-main)]">Send</span>
                                 </button>
@@ -104,7 +104,7 @@ export default function Activity() {
             </div>
 
             <div className="mt-4 pt-4 border-t border-[var(--divider)] text-center transition-colors">
-                <Link href="/recent-activity/all/" className="text-[var(--text-dim)] font-semibold hover:bg-[var(--bg-color)] hover:text-[var(--text-main)] px-4 py-2 rounded-md transition-colors w-full flex items-center justify-center gap-2">
+                <Link href="/recent-activity/all/" className="text-[var(--text-dim)] font-semibold hover:text-[var(--text-main)] px-4 py-2 rounded-md transition-colors w-full flex items-center justify-center gap-2">
                     Show all activity
                     <FontAwesomeIcon icon={faChevronRight} className="w-3 h-3" />
                 </Link>

@@ -50,7 +50,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-md text-gray-300 hover:text-blue-400 hover:bg-gray-800 transition-colors"
+            className="md:hidden p-2 rounded-md text-gray-300 hover:text-blue-400 transition-colors"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMenuOpen ? (
@@ -70,7 +70,7 @@ const Header = () => {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block px-3 py-2 text-gray-300 hover:text-blue-400 hover:bg-gray-700 rounded-md transition-colors"
+                  className="block px-3 py-2 text-gray-300 hover:text-blue-400 rounded-md transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}

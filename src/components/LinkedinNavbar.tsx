@@ -37,7 +37,7 @@ export default function LinkedinNavbar() {
             <div className="container-max h-full flex items-center justify-between px-2 sm:px-0 relative">
                 <div className="flex items-center gap-2 md:flex-none">
                     <Link href="/">
-                        <svg viewBox="0 0 24 24" className="w-[34px] h-[34px] fill-[#0a66c2]" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" className="w-[34px] h-[34px] fill-[#71b7fb]" aria-label="LinkedIn">
                             <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.22-.44-2.12-1.61-2.12a1.77 1.77 0 00-1.63 1.15.86.86 0 00-.06.42V19h-3v-9h2.9v1.3a2.89 2.89 0 012.63-1.45c1.92 0 3.37 1.28 3.37 4.02z"></path>
                         </svg>
                     </Link>
@@ -59,7 +59,7 @@ export default function LinkedinNavbar() {
                         <input
                             type="text"
                             placeholder="Search"
-                            className="bg-[var(--input-bg)] h-[34px] w-full rounded-full text-sm text-[var(--text-main)] placeholder-[var(--text-dim)] border border-[var(--nav-border)] pl-10 pr-4 transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-[#0a66c2]"
+                            className="bg-[var(--input-bg)] h-[34px] w-full rounded-full text-sm text-[var(--text-main)] placeholder-[var(--text-dim)] border border-[var(--nav-border)] pl-10 pr-4 transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-[#71b7fb]"
                             onFocus={() => setIsFocused(true)}
                             onBlur={() => setIsFocused(false)}
                         />
@@ -125,26 +125,28 @@ export default function LinkedinNavbar() {
                                             <p className="text-xs text-[var(--text-dim)] truncate">Software Engineer</p>
                                         </div>
                                     </div>
-                                    <Link href="/" className="block mt-3 text-center w-full py-1 border border-[#0a66c2] text-[#0a66c2] font-semibold rounded-full text-sm hover:bg-[#e2f0fe] transition-colors">
+                                    <Link href="/" className="block mt-3 text-center w-full py-1 border border-[#71b7fb] text-[#71b7fb] font-semibold rounded-full text-sm transition-colors">
                                         View Profile
                                     </Link>
                                 </div>
 
                                 <div className="py-2">
-                                    <div className="px-4 py-2 flex items-center justify-between hover:bg-[var(--bg-color)] transition-colors cursor-pointer" onClick={toggleTheme}>
+                                    <div className="px-4 py-2 flex items-center justify-between transition-colors cursor-pointer" onClick={toggleTheme}>
                                         <div className="flex items-center gap-2">
                                             <span className="text-sm text-[var(--text-main)]">Dark Mode</span>
                                         </div>
-                                        <div className={`w-12 h-6 rounded-full relative transition-colors duration-200 ${theme === 'dark' ? 'bg-[#0a66c2]' : 'bg-gray-300'}`}>
+                                        <div className={`w-12 h-6 rounded-full relative transition-colors duration-200 ${theme === 'dark' ? 'bg-[#71b7fb]' : 'bg-gray-300'}`}>
                                             <div className={`absolute top-1 left-1 w-4 h-4 bg-white rounded-full transition-transform duration-200 ${theme === 'dark' ? 'translate-x-6' : ''}`}></div>
                                         </div>
                                     </div>
-                                    <div className="px-4 py-2 hover:bg-[var(--bg-color)] transition-colors cursor-pointer">
-                                        <span className="text-sm text-[var(--text-main)]">Settings & Privacy</span>
-                                    </div>
-                                    <div className="px-4 py-2 hover:bg-[var(--bg-color)] transition-colors cursor-pointer border-t border-[var(--divider)] mt-1">
-                                        <span className="text-sm text-[var(--text-main)]">Sign Out</span>
-                                    </div>
+                                    <a
+                                        href="https://drive.google.com/uc?export=download&id=1zfY-kCXRgduxPF44ciWn11_w-ym3JWG5"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="px-4 py-2 transition-colors cursor-pointer block"
+                                    >
+                                        <span className="text-sm text-[var(--text-main)]">Download My Resume</span>
+                                    </a>
                                 </div>
                             </div>
                         )}

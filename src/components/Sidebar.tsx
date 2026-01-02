@@ -19,7 +19,7 @@ export default function Sidebar() {
             <PeopleYouMayKnow blurred={true} />
 
             <div className="text-[12px] text-[var(--text-dim)] flex justify-center text-center px-4 transition-colors">
-                <span>Made this with <span className="text-red-500">❤️</span> by Om Achrekar using <a href="https://antigravity.google" target="_blank" rel="noopener noreferrer" className="hover:text-[#0a66c2] hover:underline cursor-pointer font-medium transition-colors">Antigravity</a></span>
+                <span>Made this with <span className="text-red-500">❤️</span> by Om Achrekar using <a href="https://antigravity.google" target="_blank" rel="noopener noreferrer" className="hover:text-[#71b7fb] hover:underline cursor-pointer font-medium transition-colors">Antigravity</a></span>
             </div>
         </div>
     )

@@ -34,7 +34,7 @@ const Skills = () => {
 
       <div className="">
         {displayedSkills.map((skill, index) => (
-          <div key={index} className="py-4 border-b border-[var(--divider)] last:border-0 hover:bg-[var(--bg-color)] px-4 -mx-4 cursor-pointer transition-colors">
+          <div key={index} className="py-4 border-b border-[var(--divider)] last:border-0 px-4 -mx-4 cursor-pointer transition-colors">
             <h3 className="font-semibold text-[var(--text-main)] text-base transition-colors">{skill}</h3>
             <div className="flex items-center gap-2 mt-1">
               <span className="text-sm text-[var(--text-dim)] transition-colors">2 endorsements</span>
@@ -46,7 +46,7 @@ const Skills = () => {
       <div className="border-t border-[var(--divider)] mt-2">
         <button
           onClick={() => setShowAll(!showAll)}
-          className="w-full py-3 text-base font-semibold text-[var(--text-dim)] hover:bg-[var(--bg-color)] hover:text-[var(--text-main)] transition-colors flex items-center justify-center gap-1"
+          className="w-full py-3 text-base font-semibold text-[var(--text-dim)] hover:text-[var(--text-main)] transition-colors flex items-center justify-center gap-1"
         >
           {showAll ? "Show less" : `Show all ${skills.length} skills`}
           <svg

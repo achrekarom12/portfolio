@@ -9,7 +9,7 @@ interface EducationItemProps {
 
 const EducationItem = ({ school, degree, duration, logo }: EducationItemProps) => {
     return (
-        <div className="flex gap-4 py-4 border-b border-[var(--divider)] last:border-0 hover:bg-[var(--bg-color)] px-4 -mx-4 transition-colors">
+        <div className="flex gap-4 py-4 border-b border-[var(--divider)] last:border-0 px-4 -mx-4 transition-colors">
             <div className="w-12 h-12 flex-shrink-0 bg-[var(--card-bg)] rounded-sm overflow-hidden relative transition-colors">
                 {logo ? (
                     <Image

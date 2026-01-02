@@ -21,7 +21,7 @@ const CompanyExperience = ({ company, totalDuration, location, logo, roles }: Co
     const isMultiRole = roles.length > 1;
 
     return (
-        <div className="grid grid-cols-[48px_1fr] gap-x-3 sm:gap-x-4 py-4 border-b border-[var(--divider)] last:border-0 hover:bg-[var(--bg-color)] px-4 -mx-4 transition-colors group">
+        <div className="grid grid-cols-[48px_1fr] gap-x-3 sm:gap-x-4 py-4 border-b border-[var(--divider)] last:border-0 px-4 -mx-4 transition-colors group">
             {/* Row 1: Logo & Company Header */}
             <div className="relative flex flex-col items-center">
                 <div className="w-12 h-12 flex-shrink-0 bg-[var(--card-bg)] rounded-sm overflow-hidden relative z-10 transition-colors">

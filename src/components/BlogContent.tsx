@@ -23,7 +23,7 @@ export default function BlogContent({ slug }: { slug: string }) {
                 <LinkedinNavbar />
                 <div className="container-max pt-[72px] pb-8 text-center">
                     <h1 className="text-2xl font-bold mt-10 text-[var(--text-main)] transition-colors">Article not found</h1>
-                    <Link href="/recent-activity/all" className="text-[#0a66c2] hover:underline mt-4 block">
+                    <Link href="/recent-activity/all" className="text-[#71b7fb] hover:underline mt-4 block">
                         Back to Activity
                     </Link>
                 </div>
@@ -82,10 +82,10 @@ export default function BlogContent({ slug }: { slug: string }) {
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <button className="p-2 hover:bg-[var(--bg-color)] rounded-full text-[var(--text-dim)] transition-colors">
+                                    <button className="p-2 rounded-full text-[var(--text-dim)] transition-colors">
                                         <FontAwesomeIcon icon={faBookmark} className="w-5 h-5" />
                                     </button>
-                                    <button className="p-2 hover:bg-[var(--bg-color)] rounded-full text-[var(--text-dim)] transition-colors">
+                                    <button className="p-2 rounded-full text-[var(--text-dim)] transition-colors">
                                         <FontAwesomeIcon icon={faEllipsisH} className="w-5 h-5" />
                                     </button>
                                 </div>
@@ -134,7 +134,7 @@ export default function BlogContent({ slug }: { slug: string }) {
                 .markdown-content ul { list-style-type: disc; margin-left: 2rem; margin-bottom: 1.5rem; }
                 .markdown-content li { margin-bottom: 0.75rem; color: var(--text-main); opacity: 0.8; font-size: 1.125rem; }
                 .markdown-content strong { font-weight: 700; color: var(--text-main); }
-                .markdown-content blockquote { border-left: 5px solid #0a66c2; padding: 1rem 1.5rem; font-style: italic; color: var(--text-main); opacity: 0.8; margin-bottom: 1.5rem; background: var(--bg-color); border-radius: 0 0.5rem 0.5rem 0; }
+                .markdown-content blockquote { border-left: 5px solid #71b7fb; padding: 1rem 1.5rem; font-style: italic; color: var(--text-main); opacity: 0.8; margin-bottom: 1.5rem; background: var(--bg-color); border-radius: 0 0.5rem 0.5rem 0; }
                 .markdown-content code { background-color: var(--bg-color); color: var(--text-main); padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-family: monospace; font-size: 0.9em; }
             `}</style>
         </div>

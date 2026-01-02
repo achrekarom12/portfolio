@@ -23,13 +23,13 @@ export default function ProfileMiniCard() {
 
             {/* Stats List */}
             <div className="divide-y divide-[var(--divider)] transition-colors">
-                <div className="flex justify-between items-center px-4 py-3 hover:bg-[var(--bg-color)] cursor-pointer transition-colors">
+                <div className="flex justify-between items-center px-4 py-3 cursor-pointer transition-colors">
                     <span className="text-[14px] font-semibold text-[var(--text-dim)]">Followers</span>
-                    <span className="text-[14px] font-bold text-[#0a66c2]">1,205</span>
+                    <span className="text-[14px] font-bold text-[#71b7fb]">1,205</span>
                 </div>
-                <div className="flex justify-between items-center px-4 py-3 hover:bg-[var(--bg-color)] cursor-pointer transition-colors">
+                <div className="flex justify-between items-center px-4 py-3 cursor-pointer transition-colors">
                     <span className="text-[14px] font-semibold text-[var(--text-dim)] transition-colors">Drafts</span>
-                    <span className="text-[14px] font-bold text-[#0a66c2]">1</span>
+                    <span className="text-[14px] font-bold text-[#71b7fb]">1</span>
                 </div>
             </div>
         </div>
