@@ -14,7 +14,7 @@ export default function ProfileHeader() {
             <section className="linkedin-card relative pt-[100px] sm:pt-[200px]">
                 {/* Banner Image */}
                 <div className="absolute top-0 left-0 w-full h-[150px] sm:h-[200px] overflow-hidden rounded-t-lg">
-                    <div className="w-full h-full bg-[url('/background_image.png')] bg-cover bg-center bg-[#a0b4b7]"></div>
+                    <div className="w-full h-full bg-[image:var(--banner-image)] bg-cover bg-center bg-[#a0b4b7]"></div>
                 </div>
 
                 <div className="px-6 pb-6 relative">

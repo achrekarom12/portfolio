@@ -10,6 +10,7 @@
   --nav-border: #e0dfdc;
   --input-bg: #eef3f8;
   --divider: #ebebeb;
+  --banner-image: url('/background_image.png');
 }
 
 .dark {
@@ -22,6 +23,7 @@
   --nav-border: #38434f;
   --input-bg: #38434f;
   --divider: #38434f;
+  --banner-image: url('/background_image_dark.jpeg');
 }
 
 @layer base {

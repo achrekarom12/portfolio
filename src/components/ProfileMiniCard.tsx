@@ -4,7 +4,7 @@ export default function ProfileMiniCard() {
     return (
         <div className="linkedin-card overflow-hidden bg-[var(--card-bg)] transition-colors">
             {/* Banner */}
-            <div className="h-16 bg-[url('/background_image.png')] bg-cover bg-center bg-[#a0b4b7]"></div>
+            <div className="h-16 bg-[image:var(--banner-image)] bg-cover bg-center bg-[#a0b4b7]"></div>
 
             {/* Profile Info */}
             <div className="px-3 pb-4 -mt-10 flex flex-col items-center border-b border-[var(--divider)] transition-colors">
