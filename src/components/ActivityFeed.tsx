@@ -22,7 +22,7 @@ export default function ActivityFeed() {
                 {filters.map((filter) => (
                     <button
                         key={filter}
-                        className={`px-3 py-1 rounded-full text-sm font-semibold border transition-colors ${filter === 'Blogs' ? 'bg-[#057642] text-white border-transparent ' : 'text-[var(--text-dim)] border-[var(--text-dim)] '}`}
+                        className={`px-3 py-1 rounded-full text-md font-bold border transition-colors ${filter === 'Blogs' ? 'bg-[#00754f] text-[#38c898] dark:bg-[#38c898] dark:text-[#000000] border-transparent ' : 'text-[var(--text-dim)] border-[var(--text-dim)] '}`}
                     >
                         {filter}
                     </button>
@@ -44,7 +44,7 @@ export default function ActivityFeed() {
                                     />
                                     <div className="flex flex-col">
                                         <div className="flex items-center gap-1">
-                                            <span className="text-[14px] font-bold text-[var(--text-main)] hover:text-[var(--accent-color)] hover:underline cursor-pointer transition-colors">Om Achrekar</span>
+                                            <span className="text-[14px] font-bold text-[var(--text-main)] cursor-pointer transition-colors">Om Achrekar</span>
                                             <span className="text-[var(--text-dim)] text-[12px] font-normal transition-colors">• You</span>
                                         </div>
                                         <span className="text-[12px] font-normal leading-tight transition-colors">Software Development Engineer I</span>
@@ -60,7 +60,7 @@ export default function ActivityFeed() {
 
                             <Link href={`/recent-activity/${activity.slug}`} className="block group">
                                 <div className="mt-2 mb-3 px-1 text-[14px]">
-                                    <h3 className="font-bold mb-1 text-[var(--text-main)] group-hover:text-[var(--accent-color)] group-hover:underline transition-colors">{activity.title}</h3>
+                                    <h3 className="font-bold mb-1 text-[var(--text-main)] transition-colors">{activity.title}</h3>
                                     <p className="text-[var(--text-main)] opacity-80 whitespace-pre-wrap line-clamp-3 transition-colors">{activity.content}</p>
                                 </div>
 

@@ -25,7 +25,7 @@ export default function Activity() {
             </div>
 
             <div className="flex gap-2 mt-4 mb-4">
-                <button className="bg-[#057642] text-white px-3 py-1 rounded-full text-sm font-semibold">
+                <button className="bg-[#00754f] text-[#38c898] dark:bg-[#38c898] dark:text-[#000000] px-3 py-1 rounded-full text-md font-bold transition-colors">
                     Blogs
                 </button>
             </div>
