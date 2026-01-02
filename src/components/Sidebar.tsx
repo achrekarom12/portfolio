@@ -5,7 +5,7 @@ export default function Sidebar() {
         <div className="md:sticky md:top-[72px]">
             <div className="linkedin-card p-4">
                 <div className="flex justify-between items-center mb-2">
-                    <h2 className="text-base font-semibold text-gray-900">People also viewed</h2>
+                    <h2 className="text-base font-semibold text-[var(--text-main)] transition-colors">People also viewed</h2>
                 </div>
                 <div className="space-y-1 blur-[3px] select-none pointer-events-none">
                     <SidebarItem name="Sarah Smith" headline="Senior Software Engineer at Google | Python | React" />
@@ -18,8 +18,8 @@ export default function Sidebar() {
 
             <PeopleYouMayKnow blurred={true} />
 
-            <div className="text-[12px] text-gray-500 flex justify-center text-center px-4">
-                <span>Made this with <span className="text-red-500">❤️</span> by Om Achrekar using <a href="https://antigravity.google" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 hover:underline cursor-pointer font-medium">Antigravity</a></span>
+            <div className="text-[12px] text-[var(--text-dim)] flex justify-center text-center px-4 transition-colors">
+                <span>Made this with <span className="text-red-500">❤️</span> by Om Achrekar using <a href="https://antigravity.google" target="_blank" rel="noopener noreferrer" className="hover:text-[#0a66c2] hover:underline cursor-pointer font-medium transition-colors">Antigravity</a></span>
             </div>
         </div>
     )

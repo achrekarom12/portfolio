@@ -9,7 +9,7 @@ import Sidebar from '@/components/Sidebar'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#f3f2ef]">
+    <div className="min-h-screen bg-[var(--bg-color)] transition-colors">
       <LinkedinNavbar />
 
       <div className="container-max pt-[72px] pb-8">
@@ -24,7 +24,7 @@ export default function Home() {
             <Skills />
 
             {/* Credits / Footer for Main Column */}
-            <div className="text-center text-sm text-gray-500 py-4">
+            <div className="text-center text-sm text-[var(--text-dim)] py-4 transition-colors">
             </div>
           </main>
 

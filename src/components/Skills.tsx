@@ -29,25 +29,24 @@ const Skills = () => {
   return (
     <section className="linkedin-card p-5 sm:p-6 pb-2">
       <div className="flex justify-between items-center mb-2">
-        <h2 className="text-xl font-semibold text-gray-900">Skills</h2>
-
+        <h2 className="text-xl font-semibold text-[var(--text-main)] transition-colors">Skills</h2>
       </div>
 
       <div className="">
         {displayedSkills.map((skill, index) => (
-          <div key={index} className="py-4 border-b border-gray-100 last:border-0 hover:bg-gray-50 px-4 -mx-4 cursor-pointer transition-colors">
-            <h3 className="font-semibold text-gray-900 text-base">{skill}</h3>
+          <div key={index} className="py-4 border-b border-[var(--divider)] last:border-0 hover:bg-[var(--bg-color)] px-4 -mx-4 cursor-pointer transition-colors">
+            <h3 className="font-semibold text-[var(--text-main)] text-base transition-colors">{skill}</h3>
             <div className="flex items-center gap-2 mt-1">
-              <span className="text-sm text-gray-500">2 endorsements</span>
+              <span className="text-sm text-[var(--text-dim)] transition-colors">2 endorsements</span>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="border-t border-gray-100 mt-2">
+      <div className="border-t border-[var(--divider)] mt-2">
         <button
           onClick={() => setShowAll(!showAll)}
-          className="w-full py-3 text-base font-semibold text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition-colors flex items-center justify-center gap-1"
+          className="w-full py-3 text-base font-semibold text-[var(--text-dim)] hover:bg-[var(--bg-color)] hover:text-[var(--text-main)] transition-colors flex items-center justify-center gap-1"
         >
           {showAll ? "Show less" : `Show all ${skills.length} skills`}
           <svg

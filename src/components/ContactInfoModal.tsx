@@ -13,13 +13,13 @@ export default function ContactInfoModal({ isOpen, onClose }: ContactInfoModalPr
 
     return (
         <div className="fixed inset-0 bg-black/60 z-[60] flex items-center justify-center p-4 animate-fadeIn">
-            <div className="bg-white w-full max-w-[552px] max-h-[90vh] overflow-y-auto rounded-lg shadow-2xl flex flex-col">
+            <div className="bg-[var(--card-bg)] w-full max-w-[552px] max-h-[90vh] overflow-y-auto rounded-lg shadow-2xl flex flex-col transition-colors">
                 {/* Header */}
-                <div className="flex justify-between items-center px-6 py-4 border-b border-gray-100">
-                    <h2 className="text-xl font-semibold text-gray-900">Om Achrekar</h2>
+                <div className="flex justify-between items-center px-6 py-4 border-b border-[var(--divider)]">
+                    <h2 className="text-xl font-semibold text-[var(--text-main)] transition-colors">Om Achrekar</h2>
                     <button
                         onClick={onClose}
-                        className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-600 transition-colors"
+                        className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-[var(--bg-color)] text-[var(--text-dim)] transition-colors"
                     >
                         <FontAwesomeIcon icon={faXmark} className="w-6 h-6" />
                     </button>
@@ -28,18 +28,17 @@ export default function ContactInfoModal({ isOpen, onClose }: ContactInfoModalPr
                 {/* Body */}
                 <div className="p-6">
                     <div className="flex justify-between items-start mb-6">
-                        <h3 className="text-lg font-semibold text-gray-900">Contact Info</h3>
-
+                        <h3 className="text-lg font-semibold text-[var(--text-main)] transition-colors">Contact Info</h3>
                     </div>
 
                     <div className="space-y-6">
                         {/* LinkedIn */}
                         <div className="flex gap-4">
                             <div className="mt-1">
-                                <FontAwesomeIcon icon={faLinkedin} className="w-6 h-6 text-gray-600" />
+                                <FontAwesomeIcon icon={faLinkedin} className="w-6 h-6 text-[var(--text-dim)] transition-colors" />
                             </div>
                             <div>
-                                <h4 className="text-base font-semibold text-gray-900">Your Profile</h4>
+                                <h4 className="text-base font-semibold text-[var(--text-main)] transition-colors">Your Profile</h4>
                                 <a href="https://linkedin.com/in/achrekarom" target="_blank" rel="noopener noreferrer" className="text-sm text-[#0a66c2] hover:underline block break-all">
                                     linkedin.com/in/achrekarom
                                 </a>
@@ -49,10 +48,10 @@ export default function ContactInfoModal({ isOpen, onClose }: ContactInfoModalPr
                         {/* GitHub */}
                         <div className="flex gap-4">
                             <div className="mt-1">
-                                <FontAwesomeIcon icon={faGithub} className="w-6 h-6 text-gray-600" />
+                                <FontAwesomeIcon icon={faGithub} className="w-6 h-6 text-[var(--text-dim)] transition-colors" />
                             </div>
                             <div>
-                                <h4 className="text-base font-semibold text-gray-900">GitHub</h4>
+                                <h4 className="text-base font-semibold text-[var(--text-main)] transition-colors">GitHub</h4>
                                 <a href="https://github.com/achrekarom12" target="_blank" rel="noopener noreferrer" className="text-sm text-[#0a66c2] hover:underline block break-all">
                                     github.com/achrekarom12
                                 </a>
@@ -62,10 +61,10 @@ export default function ContactInfoModal({ isOpen, onClose }: ContactInfoModalPr
                         {/* LeetCode */}
                         <div className="flex gap-4">
                             <div className="mt-1">
-                                <FontAwesomeIcon icon={faCode} className="w-5 h-5 text-gray-600" />
+                                <FontAwesomeIcon icon={faCode} className="w-5 h-5 text-[var(--text-dim)] transition-colors" />
                             </div>
                             <div>
-                                <h4 className="text-base font-semibold text-gray-900">LeetCode</h4>
+                                <h4 className="text-base font-semibold text-[var(--text-main)] transition-colors">LeetCode</h4>
                                 <a href="https://leetcode.com/u/achrekarom12/" target="_blank" rel="noopener noreferrer" className="text-sm text-[#0a66c2] hover:underline block break-all">
                                     leetcode.com/u/achrekarom12
                                 </a>
@@ -74,10 +73,10 @@ export default function ContactInfoModal({ isOpen, onClose }: ContactInfoModalPr
                         {/* Email */}
                         <div className="flex gap-4">
                             <div className="mt-1">
-                                <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5 text-gray-600" />
+                                <FontAwesomeIcon icon={faEnvelope} className="w-5 h-5 text-[var(--text-dim)] transition-colors" />
                             </div>
                             <div>
-                                <h4 className="text-base font-semibold text-gray-900">Email</h4>
+                                <h4 className="text-base font-semibold text-[var(--text-main)] transition-colors">Email</h4>
                                 <a href="mailto:achrekarom@gmail.com" className="text-sm text-[#0a66c2] hover:underline block break-all">
                                     achrekarom@gmail.com
                                 </a>

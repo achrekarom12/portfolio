@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function RecentActivityPage() {
     return (
-        <div className="min-h-screen bg-[#f3f2ef]">
+        <div className="min-h-screen bg-[var(--bg-color)] transition-colors duration-200">
             <LinkedinNavbar />
 
             <div className="container-max pt-[72px] pb-8">

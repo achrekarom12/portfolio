@@ -9,8 +9,8 @@ interface EducationItemProps {
 
 const EducationItem = ({ school, degree, duration, logo }: EducationItemProps) => {
     return (
-        <div className="flex gap-4 py-4 border-b border-gray-100 last:border-0 hover:bg-gray-50/50 px-4 -mx-4 transition-colors">
-            <div className="w-12 h-12 flex-shrink-0 bg-white rounded-sm overflow-hidden relative">
+        <div className="flex gap-4 py-4 border-b border-[var(--divider)] last:border-0 hover:bg-[var(--bg-color)] px-4 -mx-4 transition-colors">
+            <div className="w-12 h-12 flex-shrink-0 bg-[var(--card-bg)] rounded-sm overflow-hidden relative transition-colors">
                 {logo ? (
                     <Image
                         src={logo}
@@ -20,16 +20,16 @@ const EducationItem = ({ school, degree, duration, logo }: EducationItemProps) =
                         className="object-contain"
                     />
                 ) : (
-                    <div className="w-full h-full bg-gray-200 flex items-center justify-center text-gray-400 font-bold text-xl">
+                    <div className="w-full h-full bg-[var(--bg-color)] flex items-center justify-center text-[var(--text-dim)] font-bold text-xl transition-colors">
                         {school.charAt(0)}
                     </div>
                 )}
             </div>
 
             <div className="flex flex-col">
-                <h3 className="text-base font-bold text-gray-900 leading-tight">{school}</h3>
-                <p className="text-sm text-gray-900">{degree}</p>
-                <p className="text-sm text-gray-500 mt-1">{duration}</p>
+                <h3 className="text-base font-bold text-[var(--text-main)] leading-tight transition-colors">{school}</h3>
+                <p className="text-sm text-[var(--text-main)] transition-colors">{degree}</p>
+                <p className="text-sm text-[var(--text-dim)] mt-1 transition-colors">{duration}</p>
             </div>
         </div>
     );
@@ -39,7 +39,7 @@ export default function Education() {
     return (
         <section className="linkedin-card p-5 sm:p-6">
             <div className="flex justify-between items-center mb-2">
-                <h2 className="text-xl font-semibold text-gray-900">Education</h2>
+                <h2 className="text-xl font-semibold text-[var(--text-main)] transition-colors">Education</h2>
             </div>
 
             <div className="mt-2">
