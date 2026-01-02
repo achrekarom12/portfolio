@@ -11,9 +11,48 @@ import {
 import { faThumbsUp as faThumbsUpReg, faCommentDots as faCommentDotsReg } from '@fortawesome/free-regular-svg-icons';
 import { activities } from '@/data/activities';
 import Link from 'next/link';
+import { useToast } from './ToastProvider';
 
 export default function ActivityFeed() {
+    const { showToast } = useToast();
     const filters = ["Blogs", "Projects", "Articles", "Events"];
+
+    const handleLike = () => {
+        showToast("Wait, this isn't the real LinkedIn... but I'll take it!");
+    };
+
+    const handleComment = () => {
+        showToast("This comment section is serverless!");
+    };
+
+    const handleRepost = () => {
+        showToast("Reposted in your heart!");
+    };
+
+    const handleSend = async (slug: string) => {
+        const url = `${window.location.origin}/recent-activity/${slug}`;
+
+        try {
+            if (navigator.clipboard && window.isSecureContext) {
+                await navigator.clipboard.writeText(url);
+            } else {
+                // Fallback for non-HTTPS mobile devices
+                const textArea = document.createElement("textarea");
+                textArea.value = url;
+                textArea.style.position = "fixed";
+                textArea.style.left = "-9999px";
+                textArea.style.top = "0";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                document.execCommand('copy');
+                textArea.remove();
+            }
+            showToast("Copied to your clipboard!");
+        } catch (err) {
+            showToast("Failed to copy link");
+        }
+    };
 
     return (
         <div className="linkedin-card p-4 transition-colors">
@@ -93,22 +132,34 @@ export default function ActivityFeed() {
                                 </div>
                             </div>
 
-                            <div className="flex justify-between mt-1 pt-1">
-                                <button className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded transition-colors text-[var(--text-dim)] font-semibold group">
-                                    <FontAwesomeIcon icon={faThumbsUpReg} className="w-5 h-5 group-hover:text-[var(--text-main)] transition-colors" />
-                                    <span className="text-sm group-hover:text-[var(--text-main)] transition-colors">Like</span>
+                            <div className="flex justify-between mt-1 pt-1 -mx-2">
+                                <button
+                                    onClick={handleLike}
+                                    className="flex-1 flex items-center justify-center gap-1 sm:gap-1.5 py-2 sm:py-2.5 rounded transition-colors text-[var(--text-dim)] font-semibold group"
+                                >
+                                    <FontAwesomeIcon icon={faThumbsUpReg} className="w-4 h-4 sm:w-5 sm:h-5 group-hover:text-[var(--text-main)] transition-colors" />
+                                    <span className="text-[10px] sm:text-sm group-hover:text-[var(--text-main)] transition-colors">Like</span>
                                 </button>
-                                <button className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded transition-colors text-[var(--text-dim)] font-semibold group">
-                                    <FontAwesomeIcon icon={faCommentDotsReg} className="w-5 h-5 group-hover:text-[var(--text-main)] transition-colors" />
-                                    <span className="text-sm group-hover:text-[var(--text-main)] transition-colors">Comment</span>
+                                <button
+                                    onClick={handleComment}
+                                    className="flex-1 flex items-center justify-center gap-1 sm:gap-1.5 py-2 sm:py-2.5 rounded transition-colors text-[var(--text-dim)] font-semibold group"
+                                >
+                                    <FontAwesomeIcon icon={faCommentDotsReg} className="w-4 h-4 sm:w-5 sm:h-5 group-hover:text-[var(--text-main)] transition-colors" />
+                                    <span className="text-[10px] sm:text-sm group-hover:text-[var(--text-main)] transition-colors">Comment</span>
                                 </button>
-                                <button className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded transition-colors text-[var(--text-dim)] font-semibold group">
-                                    <FontAwesomeIcon icon={faRetweet} className="w-5 h-5 group-hover:text-[var(--text-main)] transition-colors" />
-                                    <span className="text-sm group-hover:text-[var(--text-main)] transition-colors">Repost</span>
+                                <button
+                                    onClick={handleRepost}
+                                    className="flex-1 flex items-center justify-center gap-1 sm:gap-1.5 py-2 sm:py-2.5 rounded transition-colors text-[var(--text-dim)] font-semibold group"
+                                >
+                                    <FontAwesomeIcon icon={faRetweet} className="w-4 h-4 sm:w-5 sm:h-5 group-hover:text-[var(--text-main)] transition-colors" />
+                                    <span className="text-[10px] sm:text-sm group-hover:text-[var(--text-main)] transition-colors">Repost</span>
                                 </button>
-                                <button className="flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded transition-colors text-[var(--text-dim)] font-semibold group">
-                                    <FontAwesomeIcon icon={faPaperPlane} className="w-5 h-5 group-hover:text-[var(--text-main)] transition-colors" />
-                                    <span className="text-sm group-hover:text-[var(--text-main)] transition-colors">Send</span>
+                                <button
+                                    onClick={() => handleSend(activity.slug)}
+                                    className="flex-1 flex items-center justify-center gap-1 sm:gap-1.5 py-2 sm:py-2.5 rounded transition-colors text-[var(--text-dim)] font-semibold group"
+                                >
+                                    <FontAwesomeIcon icon={faPaperPlane} className="w-4 h-4 sm:w-5 sm:h-5 group-hover:text-[var(--text-main)] transition-colors" />
+                                    <span className="text-[10px] sm:text-sm group-hover:text-[var(--text-main)] transition-colors">Send</span>
                                 </button>
                             </div>
                         </div>

@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -13,8 +15,46 @@ import { faThumbsUp as faThumbsUpReg, faCommentDots as faCommentDotsReg } from '
 
 import Link from 'next/link';
 import { activities as blogs } from '@/data/activities';
+import { useToast } from './ToastProvider';
 
 export default function Activity() {
+    const { showToast } = useToast();
+
+    const handleLike = () => {
+        showToast("Wait, this isn't the real LinkedIn... but I'll take it!");
+    };
+
+    const handleComment = () => {
+        showToast("This comment section is serverless!");
+    };
+
+    const handleRepost = () => {
+        showToast("Reposted in your heart!");
+    };
+
+    const handleSend = async (slug: string) => {
+        const url = `${window.location.origin}/recent-activity/${slug}`;
+
+        try {
+            if (navigator.clipboard && window.isSecureContext) {
+                await navigator.clipboard.writeText(url);
+            } else {
+                // Fallback for non-HTTPS mobile devices
+                const textArea = document.createElement("textarea");
+                textArea.value = url;
+                textArea.style.position = "fixed";
+                textArea.style.left = "-9999px";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                document.execCommand('copy');
+                textArea.remove();
+            }
+            showToast("Copied to your clipboard!");
+        } catch (err) {
+            showToast("Failed to copy link");
+        }
+    };
     return (
         <section className="linkedin-card p-5 sm:p-6">
             <div className="flex justify-between items-start mb-1">
@@ -80,22 +120,34 @@ export default function Activity() {
                                 </div>
                             </div>
 
-                            <div className="flex justify-between text-[var(--text-dim)]">
-                                <button className="flex items-center gap-1.5 px-2 py-1.5 rounded transition-colors group">
-                                    <FontAwesomeIcon icon={faThumbsUpReg} className="w-5 h-5 group-hover:text-[var(--text-main)]" />
-                                    <span className="text-xs font-semibold group-hover:text-[var(--text-main)]">Like</span>
+                            <div className="flex justify-between text-[var(--text-dim)] -mx-1">
+                                <button
+                                    onClick={handleLike}
+                                    className="flex-1 flex items-center justify-center gap-1 sm:gap-1.5 px-0.5 sm:px-2 py-1.5 rounded transition-colors group"
+                                >
+                                    <FontAwesomeIcon icon={faThumbsUpReg} className="w-4 h-4 sm:w-5 sm:h-5 group-hover:text-[var(--text-main)]" />
+                                    <span className="text-[10px] sm:text-xs font-semibold group-hover:text-[var(--text-main)]">Like</span>
                                 </button>
-                                <button className="flex items-center gap-1.5 px-2 py-1.5 rounded transition-colors group">
-                                    <FontAwesomeIcon icon={faCommentDotsReg} className="w-5 h-5 group-hover:text-[var(--text-main)]" />
-                                    <span className="text-xs font-semibold group-hover:text-[var(--text-main)]">Comment</span>
+                                <button
+                                    onClick={handleComment}
+                                    className="flex-1 flex items-center justify-center gap-1 sm:gap-1.5 px-0.5 sm:px-2 py-1.5 rounded transition-colors group"
+                                >
+                                    <FontAwesomeIcon icon={faCommentDotsReg} className="w-4 h-4 sm:w-5 sm:h-5 group-hover:text-[var(--text-main)]" />
+                                    <span className="text-[10px] sm:text-xs font-semibold group-hover:text-[var(--text-main)]">Comment</span>
                                 </button>
-                                <button className="flex items-center gap-1.5 px-2 py-1.5 rounded transition-colors group">
-                                    <FontAwesomeIcon icon={faRetweet} className="w-5 h-5 group-hover:text-[var(--text-main)]" />
-                                    <span className="text-xs font-semibold group-hover:text-[var(--text-main)]">Repost</span>
+                                <button
+                                    onClick={handleRepost}
+                                    className="flex-1 flex items-center justify-center gap-1 sm:gap-1.5 px-0.5 sm:px-2 py-1.5 rounded transition-colors group"
+                                >
+                                    <FontAwesomeIcon icon={faRetweet} className="w-4 h-4 sm:w-5 sm:h-5 group-hover:text-[var(--text-main)]" />
+                                    <span className="text-[10px] sm:text-xs font-semibold group-hover:text-[var(--text-main)]">Repost</span>
                                 </button>
-                                <button className="flex items-center gap-1.5 px-2 py-1.5 rounded transition-colors group">
-                                    <FontAwesomeIcon icon={faPaperPlane} className="w-5 h-5 group-hover:text-[var(--text-main)]" />
-                                    <span className="text-xs font-semibold group-hover:text-[var(--text-main)]">Send</span>
+                                <button
+                                    onClick={() => handleSend(blog.slug)}
+                                    className="flex-1 flex items-center justify-center gap-1 sm:gap-1.5 px-0.5 sm:px-2 py-1.5 rounded transition-colors group"
+                                >
+                                    <FontAwesomeIcon icon={faPaperPlane} className="w-4 h-4 sm:w-5 sm:h-5 group-hover:text-[var(--text-main)]" />
+                                    <span className="text-[10px] sm:text-xs font-semibold group-hover:text-[var(--text-main)]">Send</span>
                                 </button>
                             </div>
                         </div>
