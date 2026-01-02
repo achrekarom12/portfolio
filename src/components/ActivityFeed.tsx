@@ -10,6 +10,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faThumbsUp as faThumbsUpReg, faCommentDots as faCommentDotsReg } from '@fortawesome/free-regular-svg-icons';
 import { activities } from '@/data/activities';
+import Link from 'next/link';
 
 export default function ActivityFeed() {
     const filters = ["Blogs", "Projects", "Articles", "Events"];
@@ -49,32 +50,32 @@ export default function ActivityFeed() {
                                         <span className="text-[12px] font-normal leading-tight">Software Development Engineer I</span>
                                         <div className="flex items-center gap-1 text-gray-500 text-[12px] font-normal">
                                             <span>{activity.date}</span>
-                                            <span className="flex items-center justify-center">
-                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" width="12" height="12" focusable="false" className="text-gray-500"><path d="M8 1a7 7 0 107 7 7 7 0 00-7-7zM3 8a5 5 0 011-3.13l7.13 7.13A5 5 0 013 8zm9 3.13L4.87 4a5 5 0 017.13 7.13z"></path></svg>
-                                            </span>
                                         </div>
                                     </div>
                                 </div>
-                                <button className="text-gray-500 hover:bg-gray-100 p-1.5 rounded-full">
+                                <button className="text-gray-500 hover:bg-gray-100 p-1.5 rounded-full" onClick={(e) => e.preventDefault()}>
                                     <FontAwesomeIcon icon={faEllipsisH} className="w-4 h-4" />
                                 </button>
                             </div>
-                            <div className="mt-2 mb-3 px-1 text-[14px]">
-                                <h3 className="font-bold mb-1 text-gray-900">{activity.title}</h3>
-                                <p className="text-gray-700 whitespace-pre-wrap">{activity.content}</p>
-                            </div>
-                        </div>
 
-                        {activity.image && (
-                            <div className="relative aspect-video w-full bg-gray-100">
-                                <Image
-                                    src={activity.image}
-                                    alt={activity.title}
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-                        )}
+                            <Link href={`/recent-activity/${activity.slug}`} className="block group">
+                                <div className="mt-2 mb-3 px-1 text-[14px]">
+                                    <h3 className="font-bold mb-1 text-gray-900 group-hover:text-[#0a66c2] group-hover:underline transition-colors">{activity.title}</h3>
+                                    <p className="text-gray-700 whitespace-pre-wrap line-clamp-3">{activity.content}</p>
+                                </div>
+
+                                {activity.image && (
+                                    <div className="relative aspect-video w-[calc(100%+1.5rem)] -mx-3 bg-gray-100">
+                                        <Image
+                                            src={activity.image}
+                                            alt={activity.title}
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                )}
+                            </Link>
+                        </div>
 
                         <div className="px-3 py-2">
                             <div className="flex items-center justify-between text-[12px] text-gray-500 pb-2 border-b border-gray-100">
