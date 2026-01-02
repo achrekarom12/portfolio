@@ -1,7 +1,6 @@
 "use client";
 import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
+
 
 const Skills = () => {
   const [showAll, setShowAll] = useState(false);
@@ -31,14 +30,7 @@ const Skills = () => {
     <section className="linkedin-card p-5 sm:p-6 pb-2">
       <div className="flex justify-between items-center mb-2">
         <h2 className="text-xl font-semibold text-gray-900">Skills</h2>
-        <div className="flex gap-2">
-          <button className="p-2 hover:bg-gray-100 rounded-full transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false" className="text-gray-500"><path d="M21 13h-8v8h-2v-8H3v-2h8V3h2v8h8z"></path></svg>
-          </button>
-          <button className="p-2 hover:bg-gray-100 rounded-full transition-colors">
-            <FontAwesomeIcon icon={faPenToSquare} className="text-gray-500 w-6 h-6" />
-          </button>
-        </div>
+
       </div>
 
       <div className="">

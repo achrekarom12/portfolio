@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark, faLink, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
+
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 interface ContactInfoModalProps {
@@ -29,9 +29,7 @@ export default function ContactInfoModal({ isOpen, onClose }: ContactInfoModalPr
                 <div className="p-6">
                     <div className="flex justify-between items-start mb-6">
                         <h3 className="text-lg font-semibold text-gray-900">Contact Info</h3>
-                        <button className="p-2 hover:bg-gray-100 rounded-full transition-colors -mr-2">
-                            <FontAwesomeIcon icon={faPenToSquare} className="text-gray-500 w-5 h-5" />
-                        </button>
+
                     </div>
 
                     <div className="space-y-6">

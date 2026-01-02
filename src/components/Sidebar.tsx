@@ -18,7 +18,7 @@ const SidebarItem = ({ name, headline }: { name: string, headline: string }) => 
 
 export default function Sidebar() {
     return (
-        <div className="space-y-2 md:sticky md:top-[72px]">
+        <div className="md:sticky md:top-[72px]">
             <div className="linkedin-card p-4">
                 <div className="flex justify-between items-center mb-2">
                     <h2 className="text-base font-semibold text-gray-900">People also viewed</h2>

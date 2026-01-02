@@ -1,8 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
+
 import { useState } from 'react';
 import ContactInfoModal from './ContactInfoModal';
 
@@ -23,7 +22,7 @@ export default function ProfileHeader() {
 
                 <div className="px-6 pb-6 relative">
                     {/* Profile Picture */}
-                    <div className="absolute -top-[60px] sm:-top-[110px] left-6 border-4 border-white rounded-full overflow-hidden w-[130px] h-[130px] sm:w-[160px] sm:h-[160px] bg-white shadow-sm">
+                    <div className="absolute -top-[95px] sm:-top-[140px] left-6 border-4 border-white rounded-full overflow-hidden w-[130px] h-[130px] sm:w-[160px] sm:h-[160px] bg-white shadow-sm">
                         <Image
                             src="/my_image.png"
                             alt="Om Achrekar"
@@ -35,16 +34,11 @@ export default function ProfileHeader() {
                         {/* background_img.jpg */}
                     </div>
 
-                    <div className="flex justify-end pt-3 mb-4">
-                        <button className="p-2 hover:bg-gray-100 rounded-full transition-colors mr-2">
-                            <FontAwesomeIcon icon={faPenToSquare} className="text-gray-500 w-6 h-6" />
-                        </button>
-                    </div>
 
-                    <div className="mt-12 sm:mt-8">
+                    <div className="mt-20 sm:mt-16">
                         <div className="flex flex-col sm:flex-row justify-between items-start">
                             <div>
-                                <h1 className="text-2xl font-semibold text-gray-900 flex items-center gap-1">
+                                <h1 className="mt-10 text-2xl font-semibold text-gray-900 flex items-center gap-1">
                                     Om Achrekar
                                     <span className="text-gray-500 text-sm font-normal">(He/Him)</span>
                                 </h1>
