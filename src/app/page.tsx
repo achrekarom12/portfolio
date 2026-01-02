@@ -1,6 +1,7 @@
 import LinkedinNavbar from '@/components/LinkedinNavbar'
 import ProfileHeader from '@/components/ProfileHeader'
 import About from '@/components/About'
+import Activity from '@/components/Activity'
 import Experience from '@/components/Experience'
 import Education from '@/components/Education'
 import Skills from '@/components/Skills'
@@ -17,6 +18,7 @@ export default function Home() {
           <main className="md:col-span-8 lg:col-span-9 space-y-2 sm:space-y-4">
             <ProfileHeader />
             <About />
+            <Activity />
             <Experience />
             <Education />
             <Skills />

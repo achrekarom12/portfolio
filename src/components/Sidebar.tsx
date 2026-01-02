@@ -42,13 +42,8 @@ export default function Sidebar() {
                 </div>
             </div>
 
-            <div className="text-[12px] text-gray-500 flex flex-wrap gap-2 justify-center px-4">
-                <span className="hover:text-blue-600 hover:underline cursor-pointer">About</span>
-                <span className="hover:text-blue-600 hover:underline cursor-pointer">Accessibility</span>
-                <span className="hover:text-blue-600 hover:underline cursor-pointer">Help Center</span>
-                <span className="hover:text-blue-600 hover:underline cursor-pointer">Privacy & Terms</span>
-                <span className="hover:text-blue-600 hover:underline cursor-pointer">Ad Choices</span>
-                <span className="hover:text-blue-600 hover:underline cursor-pointer">Advertising</span>
+            <div className="text-[12px] text-gray-500 flex justify-center text-center px-4">
+                <span>Made this with <span className="text-red-500">❤️</span> by Om Achrekar using <a href="https://antigravity.google" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 hover:underline cursor-pointer font-medium">Antigravity</a></span>
             </div>
         </div>
     )
