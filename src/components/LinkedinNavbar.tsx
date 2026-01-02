@@ -22,7 +22,7 @@ export default function LinkedinNavbar() {
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
     return (
-        <header className="fixed top-0 left-0 w-full bg-white border-b border-[#e0dfdc] z-50 h-[52px]">
+        <header className="fixed top-0 left-0 w-full bg-white border-b border-[#e0dfdc] z-50 h-[56px]">
             <div className="container-max h-full flex items-center justify-between px-4 sm:px-0 relative">
                 <div className="flex items-center gap-2">
                     <Link href="/">

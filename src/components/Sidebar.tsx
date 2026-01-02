@@ -23,7 +23,7 @@ export default function Sidebar() {
                 <div className="flex justify-between items-center mb-2">
                     <h2 className="text-base font-semibold text-gray-900">People also viewed</h2>
                 </div>
-                <div className="space-y-1">
+                <div className="space-y-1 blur-[3px] select-none pointer-events-none">
                     <SidebarItem name="Sarah Smith" headline="Senior Software Engineer at Google | Python | React" />
                     <SidebarItem name="David Chen" headline="Full Stack Developer @ Amazon | AWS Certified" />
                     <SidebarItem name="Emily Davis" headline="Frontend Architect | Typography Enthusiast" />
@@ -36,7 +36,7 @@ export default function Sidebar() {
                 <div className="flex justify-between items-center mb-2">
                     <h2 className="text-base font-semibold text-gray-900">People you may know</h2>
                 </div>
-                <div className="space-y-1">
+                <div className="space-y-1 blur-[3px] select-none pointer-events-none">
                     <SidebarItem name="Alex Johnson" headline="Software Engineer III at Netflix" />
                     <SidebarItem name="Maria Garcia" headline="Data Scientist at Uber" />
                 </div>

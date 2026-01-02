@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark, faLink, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faXmark, faLink, faEnvelope, faCode } from '@fortawesome/free-solid-svg-icons';
 
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 interface ContactInfoModalProps {
     isOpen: boolean;
@@ -46,19 +46,31 @@ export default function ContactInfoModal({ isOpen, onClose }: ContactInfoModalPr
                             </div>
                         </div>
 
-                        {/* Website */}
+                        {/* GitHub */}
                         <div className="flex gap-4">
                             <div className="mt-1">
-                                <FontAwesomeIcon icon={faLink} className="w-5 h-5 text-gray-600" />
+                                <FontAwesomeIcon icon={faGithub} className="w-6 h-6 text-gray-600" />
                             </div>
                             <div>
-                                <h4 className="text-base font-semibold text-gray-900">Website</h4>
-                                <a href="https://itsom.dev" target="_blank" rel="noopener noreferrer" className="text-sm text-[#0a66c2] hover:underline block break-all">
-                                    https://itsom.dev <span className="text-gray-500 hover:no-underline">(Portfolio)</span>
+                                <h4 className="text-base font-semibold text-gray-900">GitHub</h4>
+                                <a href="https://github.com/achrekarom12" target="_blank" rel="noopener noreferrer" className="text-sm text-[#0a66c2] hover:underline block break-all">
+                                    github.com/achrekarom12
                                 </a>
                             </div>
                         </div>
 
+                        {/* LeetCode */}
+                        <div className="flex gap-4">
+                            <div className="mt-1">
+                                <FontAwesomeIcon icon={faCode} className="w-5 h-5 text-gray-600" />
+                            </div>
+                            <div>
+                                <h4 className="text-base font-semibold text-gray-900">LeetCode</h4>
+                                <a href="https://leetcode.com/u/achrekarom12/" target="_blank" rel="noopener noreferrer" className="text-sm text-[#0a66c2] hover:underline block break-all">
+                                    leetcode.com/u/achrekarom12
+                                </a>
+                            </div>
+                        </div>
                         {/* Email */}
                         <div className="flex gap-4">
                             <div className="mt-1">
