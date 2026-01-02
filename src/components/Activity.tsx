@@ -11,49 +11,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faThumbsUp as faThumbsUpReg, faCommentDots as faCommentDotsReg } from '@fortawesome/free-regular-svg-icons';
 
-interface Blog {
-    id: number;
-    title: string;
-    content: string;
-    image?: string;
-    date: string;
-    likes: number;
-    comments: number;
-    reposts?: number;
-}
-
-const blogs: Blog[] = [
-    {
-        id: 1,
-        title: "Making AI Smarter with a New MongoDB-Powered MCP Server 🚀",
-        content: "Super excited to share something I've been working on! I built a MongoDB-powered MCP server that allows AI agents to interact with your databases more intuitively. This bridge opens up so many possibilities...",
-        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000&auto=format&fit=crop",
-        date: "8mo",
-        likes: 40,
-        comments: 12,
-        reposts: 5
-    },
-    {
-        id: 2,
-        title: "Why Retrieval-Augmented Generation (RAG) is a Gamechanger for LLMs?",
-        content: "Hey there! 🤔 Have you heard about Retrieval-Augmented Generation (RAG) and how it's changing the game for Large Language Models (LLMs)?  💡 RAG is an exciting new approach that helps AI systems fetch up-to-date and relevant information before generating responses.",
-        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000&auto=format&fit=crop",
-        date: "11mo",
-        likes: 89,
-        comments: 14,
-        reposts: 3
-    },
-    {
-        id: 3,
-        title: "What it's like to be a Dev Lead at college clubs?",
-        content: "As my tenure as a Dev Lead comes to a happy end, I couldn't be more grateful for the journey it has been. Organizing MLSC Coherence 1.0, a 24-hour offline hackathon has been a highlight for me, marking the culmination of my time in this role. ",
-        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1000&auto=format&fit=crop",
-        date: "1yr",
-        likes: 90,
-        comments: 16,
-        reposts: 0
-    }
-];
+import Link from 'next/link';
+import { activities as blogs } from '@/data/activities';
 
 export default function Activity() {
     return (
@@ -145,10 +104,10 @@ export default function Activity() {
             </div>
 
             <div className="mt-4 pt-4 border-t border-gray-100 text-center">
-                <button className="text-gray-600 font-semibold hover:bg-gray-100 px-4 py-2 rounded-md transition-colors w-full flex items-center justify-center gap-2">
+                <Link href="/recent-activity/all/" className="text-gray-600 font-semibold hover:bg-gray-100 px-4 py-2 rounded-md transition-colors w-full flex items-center justify-center gap-2">
                     Show all activity
                     <FontAwesomeIcon icon={faChevronRight} className="w-3 h-3" />
-                </button>
+                </Link>
             </div>
         </section>
     );
