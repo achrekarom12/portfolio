@@ -39,7 +39,7 @@ export default function ContactInfoModal({ isOpen, onClose }: ContactInfoModalPr
                             </div>
                             <div>
                                 <h4 className="text-base font-semibold text-[var(--text-main)] transition-colors">Your Profile</h4>
-                                <a href="https://linkedin.com/in/achrekarom" target="_blank" rel="noopener noreferrer" className="text-sm text-[#71b7fb] hover:underline block break-all">
+                                <a href="https://linkedin.com/in/achrekarom" target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--accent-color)] hover:underline block break-all">
                                     linkedin.com/in/achrekarom
                                 </a>
                             </div>
@@ -52,7 +52,7 @@ export default function ContactInfoModal({ isOpen, onClose }: ContactInfoModalPr
                             </div>
                             <div>
                                 <h4 className="text-base font-semibold text-[var(--text-main)] transition-colors">GitHub</h4>
-                                <a href="https://github.com/achrekarom12" target="_blank" rel="noopener noreferrer" className="text-sm text-[#71b7fb] hover:underline block break-all">
+                                <a href="https://github.com/achrekarom12" target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--accent-color)] hover:underline block break-all">
                                     github.com/achrekarom12
                                 </a>
                             </div>
@@ -65,7 +65,7 @@ export default function ContactInfoModal({ isOpen, onClose }: ContactInfoModalPr
                             </div>
                             <div>
                                 <h4 className="text-base font-semibold text-[var(--text-main)] transition-colors">LeetCode</h4>
-                                <a href="https://leetcode.com/u/achrekarom12/" target="_blank" rel="noopener noreferrer" className="text-sm text-[#71b7fb] hover:underline block break-all">
+                                <a href="https://leetcode.com/u/achrekarom12/" target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--accent-color)] hover:underline block break-all">
                                     leetcode.com/u/achrekarom12
                                 </a>
                             </div>
@@ -77,7 +77,7 @@ export default function ContactInfoModal({ isOpen, onClose }: ContactInfoModalPr
                             </div>
                             <div>
                                 <h4 className="text-base font-semibold text-[var(--text-main)] transition-colors">Email</h4>
-                                <a href="mailto:achrekarom@gmail.com" className="text-sm text-[#71b7fb] hover:underline block break-all">
+                                <a href="mailto:achrekarom@gmail.com" className="text-sm text-[var(--accent-color)] hover:underline block break-all">
                                     achrekarom@gmail.com
                                 </a>
                             </div>

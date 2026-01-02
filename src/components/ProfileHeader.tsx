@@ -43,10 +43,10 @@ export default function ProfileHeader() {
                                 <div className="text-sm text-[var(--text-dim)] mt-1 flex items-center gap-1 flex-wrap transition-colors">
                                     <span>Mumbai, Maharashtra, India</span>
                                     <span className="mx-1">·</span>
-                                    <a href="#" onClick={(e) => { e.preventDefault(); setShowContactInfo(true); }} className="text-[#71b7fb] hover:underline font-semibold">Contact info</a>
+                                    <a href="#" onClick={(e) => { e.preventDefault(); setShowContactInfo(true); }} className="text-[var(--accent-color)] hover:underline font-semibold">Contact info</a>
                                 </div>
 
-                                <div className="text-sm text-[#71b7fb] font-semibold mt-2 hover:underline cursor-pointer">
+                                <div className="text-sm text-[var(--accent-color)] font-semibold mt-2 hover:underline cursor-pointer">
                                     500+ connections
                                 </div>
                             </div>
@@ -74,7 +74,7 @@ export default function ProfileHeader() {
                             <div>
                                 <p className="text-sm font-semibold text-[var(--text-main)] transition-colors">Open to work</p>
                                 <p className="text-sm text-[var(--text-main)] transition-colors">Software Engineer, Backend Engineer and AI Engineer roles</p>
-                                <button className="text-[#71b7fb] text-sm font-semibold hover:underline mt-1">See all details</button>
+                                <button className="text-[var(--accent-color)] text-sm font-semibold hover:underline mt-1">See all details</button>
                             </div>
                             <button className="p-1 rounded-full absolute top-2 right-2 transition-colors">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" data-supported-dps="16x16" fill="currentColor" width="16" height="16" focusable="false" className="text-[var(--text-dim)]"><path d="M14 3.26L12.74 2 8 6.74 3.26 2 2 3.26 6.74 8 2 12.74 3.26 14 8 9.26 12.74 14 14 12.74 9.26 8z"></path></svg>

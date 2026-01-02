@@ -1,3 +1,0 @@
-module.exports=[64433,a=>{a.v({className:"inter_5972bc34-module__OU16Qa__className"})},27572,a=>{"use strict";a.s(["default",()=>f,"metadata",()=>e],27572);var b=a.i(7997),c=a.i(64433);let d={className:c.default.className,style:{fontFamily:"'Inter', 'Inter Fallback'",fontStyle:"normal"}};null!=c.default.variable&&(d.variable=c.default.variable),a.i(26480).config.autoAddCss=!1;let e={title:"Om Achrekar"};function f({children:a}){return(0,b.jsx)("html",{lang:"en",className:"scroll-smooth",children:(0,b.jsx)("body",{className:`${d.className} bg-[#f3f2ef] text-gray-900 antialiased`,children:a})})}}];
-
-//# sourceMappingURL=%5Broot-of-the-server%5D__cfa1ac48._.js.map

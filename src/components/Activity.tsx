@@ -20,7 +20,7 @@ export default function Activity() {
             <div className="flex justify-between items-start mb-1">
                 <div>
                     <h2 className="text-xl font-semibold text-[var(--text-main)] transition-colors">Activity</h2>
-                    <p className="text-sm font-semibold text-[#71b7fb] hover:underline cursor-pointer">1,205 followers</p>
+                    <p className="text-sm font-semibold text-[var(--accent-color)] hover:underline cursor-pointer">1,205 followers</p>
                 </div>
             </div>
 

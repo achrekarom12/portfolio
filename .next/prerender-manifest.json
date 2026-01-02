@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/recent-activity/mongodb-mcp-server":{},"/recent-activity/rag-is-a-gamechanger":{},"/recent-activity/dev-lead-college-clubs":{},"/recent-activity/linkedin-clone-nextjs":{}},"dynamicRoutes":{"/recent-activity/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/recent-activity/[slug]","routeRegex":"^\\/recent\\-activity\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"a699123f51955dc1c6fa69ec40cfcee2","previewModeSigningKey":"21c64caa201412a61b55de330611f6f40bbc3bb3d9581a52582350ee7805f1db","previewModeEncryptionKey":"afa483a0bd0f1e59a84194aba4e3fdb398fbfe94f7224b245d4dde896bc30704"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "2d1ba48a97c32892e7802f0b723fd83d",
+    "previewModeSigningKey": "ecf0369b54d9b76a66988d59369e29488597d9f5f8f87424ef88d7b2ceb63b3f",
+    "previewModeEncryptionKey": "88f3c9e2c407241c45c7b192f7ed120fc10e3d87674492bdf967dee0e8489f86"
+  }
+}
