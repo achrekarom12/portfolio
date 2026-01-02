@@ -77,8 +77,8 @@ export default function ContactInfoModal({ isOpen, onClose }: ContactInfoModalPr
                             </div>
                             <div>
                                 <h4 className="text-base font-semibold text-[var(--text-main)] transition-colors">Email</h4>
-                                <a href="mailto:achrekarom@gmail.com" className="text-sm text-[var(--accent-color)] hover:underline block break-all">
-                                    achrekarom@gmail.com
+                                <a href="mailto:hello@itsom.dev" className="text-sm text-[var(--accent-color)] hover:underline block break-all">
+                                    hello@itsom.dev
                                 </a>
                             </div>
                         </div>
