@@ -14,7 +14,7 @@ export default function ProfileHeader() {
             <section className="linkedin-card relative pt-[100px] sm:pt-[200px]">
                 {/* Banner Image */}
                 <div className="absolute top-0 left-0 w-full h-[150px] sm:h-[200px] overflow-hidden rounded-t-lg">
-                    <div className="w-full h-full bg-[url('/background_img.jpg')] bg-cover bg-center bg-[#a0b4b7]"></div>
+                    <div className="w-full h-full bg-[url('/background_image.png')] bg-cover bg-center bg-[#a0b4b7]"></div>
                     {/* <button className="absolute top-4 right-4 bg-white/60 p-2 rounded-full hover:bg-white transition-colors">
                     <FontAwesomeIcon icon={faPenToSquare} className="text-[#0a66c2] w-6 h-6" />
                 </button> */}
