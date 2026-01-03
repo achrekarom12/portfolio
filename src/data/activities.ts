@@ -18,8 +18,6 @@ export const activities: ActivityItem[] = [
         title: "Making AI Smarter with a New MongoDB-Powered MCP Server 🚀",
         content: "Super excited to share something I've been working on! I built a MongoDB-powered MCP server that allows AI agents to interact with your databases more intuitively. This bridge opens up so many possibilities...",
         fullContent: `
-# Making AI Smarter with a New MongoDB-Powered MCP Server 🚀
-
 Super excited to share something I've been working on! I built a MongoDB-powered MCP server that allows AI agents to interact with your databases more intuitively. This bridge opens up so many possibilities for building truly autonomous agents that can manage and query data without constant human intervention.
 
 ### Why MongoDB?
@@ -50,8 +48,6 @@ I'd love to hear your thoughts on how this could be used in your projects!
         title: "Why Retrieval-Augmented Generation (RAG) is a Gamechanger for LLMs?",
         content: "Hey there! 🤔 Have you heard about Retrieval-Augmented Generation (RAG) and how it's changing the game for Large language Models (LLMs)?  💡 RAG is an exciting new approach that helps AI systems fetch up-to-date and relevant information before generating responses.",
         fullContent: `
-# Why Retrieval-Augmented Generation (RAG) is a Gamechanger for LLMs?
-
 Hey there! 🤔 Have you heard about Retrieval-Augmented Generation (RAG) and how it's changing the game for Large Language Models (LLMs)?
 
 💡 **RAG** is an exciting new approach that helps AI systems fetch up-to-date and relevant information before generating responses. Unlike traditional LLMs that rely solely on their training data (which can get outdated), RAG models act like students with an "open book" — they can look up information in real-time.
@@ -82,8 +78,6 @@ This is where the future of AI is headed — moving from static models to dynami
         title: "What it's like to be a Dev Lead at college clubs?",
         content: "As my tenure as a Dev Lead comes to a happy end, I couldn't be more grateful for the journey it has been. Organizing MLSC Coherence 1.0, a 24-hour offline hackathon has been a highlight for me, marking the culmination of my time in this role. ",
         fullContent: `
-# What it's like to be a Dev Lead at college clubs?
-
 As my tenure as a Dev Lead comes to a happy end, I couldn't be more grateful for the journey it has been. 
 
 ### The Journey
@@ -110,8 +104,6 @@ I'm excited to see what the next generation of leads will achieve!
         title: "Building a LinkedIn Clone with Next.js and Tailwind CSS",
         content: "I recently embarked on a project to clone the LinkedIn UI. It's been a great exercise in understanding complex layouts, component architecture, and attention to detail. From the sticky navbar to the intricate feed cards, every element matters.",
         fullContent: `
-# Building a LinkedIn Clone with Next.js and Tailwind CSS
-
 I recently embarked on a project to clone the LinkedIn UI. It's been a great exercise in understanding complex layouts, component architecture, and attention to detail.
 
 ### Why a LinkedIn Clone?
