@@ -38,7 +38,7 @@ export default function ContactInfoModal({ isOpen, onClose }: ContactInfoModalPr
                                 <FontAwesomeIcon icon={faLinkedin} className="w-6 h-6 text-[var(--text-dim)] transition-colors" />
                             </div>
                             <div>
-                                <h4 className="text-base font-semibold text-[var(--text-main)] transition-colors">Your Profile</h4>
+                                <h4 className="text-base font-semibold text-[var(--text-main)] transition-colors">Profile</h4>
                                 <a href="https://linkedin.com/in/achrekarom" target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--accent-color)] hover:underline block break-all">
                                     linkedin.com/in/achrekarom
                                 </a>

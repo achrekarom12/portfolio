@@ -4,6 +4,7 @@ import About from '@/components/About'
 import Activity from '@/components/Activity'
 import Experience from '@/components/Experience'
 import Education from '@/components/Education'
+import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
 import Sidebar from '@/components/Sidebar'
 
@@ -21,6 +22,7 @@ export default function Home() {
             <Activity />
             <Experience />
             <Education />
+            <Projects />
             <Skills />
 
             {/* Credits / Footer for Main Column */}
