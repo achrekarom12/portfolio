@@ -6,22 +6,22 @@ const Skills = () => {
   const [showAll, setShowAll] = useState(false);
 
   const skills = [
-    "TypeScript",
-    "Python",
-    "Backend Development",
-    "Git",
-    "PostgreSQL",
-    "Docker",
-    "Kubernetes",
-    "Fastify",
-    "NestJS",
-    "FastAPI",
-    "Machine Learning",
-    "Data Structures and Algorithms",
-    "Natural Language Processing",
-    "Deep Learning",
-    "Data Science",
-    "System Design"
+    { name: "TypeScript", endorsements: 9 },
+    { name: "Python", endorsements: 7 },
+    { name: "Backend Development", endorsements: 10 },
+    { name: "Git", endorsements: 8 },
+    { name: "PostgreSQL", endorsements: 6 },
+    { name: "Docker", endorsements: 5 },
+    { name: "Kubernetes", endorsements: 4 },
+    { name: "Fastify", endorsements: 3 },
+    { name: "NestJS", endorsements: 5 },
+    { name: "FastAPI", endorsements: 4 },
+    { name: "Machine Learning", endorsements: 8 },
+    { name: "Data Structures and Algorithms", endorsements: 9 },
+    { name: "Natural Language Processing", endorsements: 7 },
+    { name: "Deep Learning", endorsements: 6 },
+    { name: "Data Science", endorsements: 8 },
+    { name: "System Design", endorsements: 7 }
   ]
 
   const displayedSkills = showAll ? skills : skills.slice(0, 3);
@@ -35,9 +35,9 @@ const Skills = () => {
       <div className="">
         {displayedSkills.map((skill, index) => (
           <div key={index} className="py-4 border-b border-[var(--divider)] last:border-0 px-4 -mx-4 cursor-pointer transition-colors">
-            <h3 className="font-semibold text-[var(--text-main)] text-base transition-colors">{skill}</h3>
+            <h3 className="font-semibold text-[var(--text-main)] text-base transition-colors">{skill.name}</h3>
             <div className="flex items-center gap-2 mt-1">
-              <span className="text-sm text-[var(--text-dim)] transition-colors">2 endorsements</span>
+              <span className="text-sm text-[var(--text-dim)] transition-colors">{skill.endorsements} endorsements</span>
             </div>
           </div>
         ))}
