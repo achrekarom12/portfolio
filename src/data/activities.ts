@@ -37,7 +37,7 @@ export const activities: ActivityItem[] = [
     #AI #MachineLearning #RAG #NLP #TechInnovation
         `,
         image: "https://s46486.pcdn.co/wp-content/uploads/2023/09/image3.png",
-        date: "11mo",
+        date: "2024-02-15",
         likes: 89,
         comments: 14,
         reposts: 3
@@ -67,7 +67,7 @@ I'd love to hear your thoughts on how this could be used in your projects!
 #ArtificialIntelligence #MongoDB #Automation #SoftwareDevelopment #WebDev
         `,
         image: "https://www.mongodb.com/docs/assets/meta_generic.png",
-        date: "8mo",
+        date: "2025-04-01",
         likes: 40,
         comments: 12,
         reposts: 5

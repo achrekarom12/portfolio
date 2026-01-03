@@ -13,6 +13,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { activities } from '@/data/activities';
 import LinkedinNavbar from '@/components/LinkedinNavbar';
+import { formatRelativeTime } from '@/utils/dateUtils';
 
 export default function BlogContent({ slug }: { slug: string }) {
     const activity = activities.find((a) => a.slug === slug);
@@ -78,7 +79,7 @@ export default function BlogContent({ slug }: { slug: string }) {
                                             <span className="font-bold">Om Achrekar</span>
                                         </div>
                                         <p className="text-sm text-[var(--text-dim)]">Software Development Engineer I</p>
-                                        <p className="text-xs text-[var(--text-dim)] opacity-70 mt-0.5">{activity.date}</p>
+                                        <p className="text-xs text-[var(--text-dim)] opacity-70 mt-0.5">{formatRelativeTime(activity.date)}</p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-2">

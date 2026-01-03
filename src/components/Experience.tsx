@@ -10,7 +10,8 @@ import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 interface Role {
     title: string;
     type: string;
-    date: string;
+    startDate: string; // "YYYY-MM"
+    endDate?: string;  // "YYYY-MM" or undefined for "Present"
     location?: string;
     description?: string;
     skills?: string[];
@@ -18,15 +19,56 @@ interface Role {
 
 interface CompanyExperienceProps {
     company: string;
-    totalDuration?: string;
     location: string;
     logo?: string;
     roles: Role[];
 }
 
-const CompanyExperience = ({ company, totalDuration, location, logo, roles }: CompanyExperienceProps) => {
+const calculateDuration = (startStr: string, endStr?: string) => {
+    const start = new Date(startStr);
+    const end = endStr ? new Date(endStr) : new Date();
+
+    let years = end.getFullYear() - start.getFullYear();
+    let months = (end.getMonth() - start.getMonth()) + 1; // Inclusive of start month
+
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    if (months >= 12) {
+        years += Math.floor(months / 12);
+        months = months % 12;
+    }
+
+    const yearStr = years > 0 ? `${years} yr${years > 1 ? 's' : ''}` : '';
+    const monthStr = months > 0 ? `${months} mo${months > 1 ? 's' : ''}` : '';
+
+    return [yearStr, monthStr].filter(Boolean).join(' ');
+};
+
+const formatDateRange = (startStr: string, endStr?: string) => {
+    const start = new Date(startStr);
+    const options: Intl.DateTimeFormatOptions = { month: 'short', year: 'numeric' };
+    const startFormatted = start.toLocaleDateString('en-US', options);
+
+    if (!endStr) {
+        return `${startFormatted} - Present · ${calculateDuration(startStr)}`;
+    }
+
+    const end = new Date(endStr);
+    const endFormatted = end.toLocaleDateString('en-US', options);
+    return `${startFormatted} - ${endFormatted} · ${calculateDuration(startStr, endStr)}`;
+};
+
+const CompanyExperience = ({ company, location, logo, roles }: CompanyExperienceProps) => {
     const isMultiRole = roles.length > 1;
     const [selectedRoleForSkills, setSelectedRoleForSkills] = useState<Role | null>(null);
+
+    // Calculate total duration from the earliest start to the latest end
+    const earliestStart = roles.reduce((min, r) => r.startDate < min ? r.startDate : min, roles[0].startDate);
+    const latestEnd = roles.some(r => !r.endDate) ? undefined : roles.reduce((max, r) => (r.endDate || "") > (max || "") ? r.endDate : max, roles[0].endDate);
+    const totalDuration = calculateDuration(earliestStart, latestEnd);
 
     return (
         <div className="grid grid-cols-[48px_1fr] gap-x-3 sm:gap-x-4 py-4 border-b border-[var(--divider)] last:border-0 px-4 -mx-4 transition-colors group">
@@ -81,7 +123,7 @@ const CompanyExperience = ({ company, totalDuration, location, logo, roles }: Co
                         <div className="flex flex-col">
                             <h4 className="text-sm font-bold text-[var(--text-main)] leading-5 transition-colors">{role.title}</h4>
                             <span className="text-sm text-[var(--text-main)] transition-colors">{role.type}</span>
-                            <span className="text-sm text-[var(--text-dim)] transition-colors">{role.date}</span>
+                            <span className="text-sm text-[var(--text-dim)] transition-colors">{formatDateRange(role.startDate, role.endDate)}</span>
                             {role.location && <span className="text-sm text-[var(--text-dim)] transition-colors">{role.location}</span>}
 
                             {role.description && (
@@ -128,21 +170,21 @@ export default function Experience() {
             <div className="mt-2">
                 <CompanyExperience
                     company="Scogo.AI"
-                    totalDuration="2 yrs"
                     location="Mumbai, Maharashtra, India"
                     // logo="/scogo-logo.png" // Uncomment when logo is available
                     roles={[
                         {
                             title: "Software Development Engineer I",
                             type: "Full-time",
-                            date: "Aug 2024 - Present · 1 yr 6 mos",
+                            startDate: "2024-08",
                             description: "I take care of the backend of agentic system including agent orchestration, async execution, event streaming, workflows management and integrating the agents into existing NestJS microservice stack.",
                             skills: ["Typescript", "NestJS", "Agentic Systems", "Microservices", "Event Streaming", "Workflow Management", "Backend Development", "Async Execution"]
                         },
                         {
                             title: "AI Intern",
                             type: "Internship",
-                            date: "Feb 2024 - Jul 2024 · 6 mos",
+                            startDate: "2024-02",
+                            endDate: "2024-07",
                             location: "On-site",
                             description: "I created a small AI based utility which could automatically parse the invoices and return the information in structured JSON format for better use. This was integrated into the core platform and was used by end users.",
                             skills: ["RAG", "Large Language Models (LLM)", "Python", "JSON Parsing", "AI Integration"]

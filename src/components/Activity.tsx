@@ -16,6 +16,7 @@ import { faThumbsUp as faThumbsUpReg, faCommentDots as faCommentDotsReg } from '
 import Link from 'next/link';
 import { activities as blogs } from '@/data/activities';
 import { useToast } from './ToastProvider';
+import { formatRelativeTime } from '@/utils/dateUtils';
 
 export default function Activity() {
     const { showToast } = useToast();
@@ -88,7 +89,7 @@ export default function Activity() {
                                             <span className="text-[14px] font-bold text-[var(--text-main)]">Om Achrekar</span>
                                         </div>
                                         <span className="text-[10px]">Software Development Engineer I</span>
-                                        <span className="text-[10px]">{blog.date}</span>
+                                        <span className="text-[10px]">{formatRelativeTime(blog.date)}</span>
                                     </div>
                                 </div>
                                 <h3 className="font-bold text-sm line-clamp-2 mb-1 text-[var(--text-main)]">{blog.title}</h3>

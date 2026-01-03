@@ -12,6 +12,7 @@ import { faThumbsUp as faThumbsUpReg, faCommentDots as faCommentDotsReg } from '
 import { activities } from '@/data/activities';
 import Link from 'next/link';
 import { useToast } from './ToastProvider';
+import { formatRelativeTime } from '@/utils/dateUtils';
 
 export default function ActivityFeed() {
     const { showToast } = useToast();
@@ -88,7 +89,7 @@ export default function ActivityFeed() {
                                         </div>
                                         <span className="text-[12px] font-normal leading-tight transition-colors">Software Development Engineer I</span>
                                         <div className="flex items-center gap-1 text-[var(--text-dim)] text-[12px] font-normal transition-colors">
-                                            <span>{activity.date}</span>
+                                            <span>{formatRelativeTime(activity.date)}</span>
                                         </div>
                                     </div>
                                 </div>
