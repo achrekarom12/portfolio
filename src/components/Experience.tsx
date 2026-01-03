@@ -1,4 +1,10 @@
+"use client";
+
 import Image from 'next/image';
+import { useState } from 'react';
+import SkillsModal from './SkillsModal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 
 
 interface Role {
@@ -6,7 +12,8 @@ interface Role {
     type: string;
     date: string;
     location?: string;
-    skills?: string;
+    description?: string;
+    skills?: string[];
 }
 
 interface CompanyExperienceProps {
@@ -19,9 +26,18 @@ interface CompanyExperienceProps {
 
 const CompanyExperience = ({ company, totalDuration, location, logo, roles }: CompanyExperienceProps) => {
     const isMultiRole = roles.length > 1;
+    const [selectedRoleForSkills, setSelectedRoleForSkills] = useState<Role | null>(null);
 
     return (
         <div className="grid grid-cols-[48px_1fr] gap-x-3 sm:gap-x-4 py-4 border-b border-[var(--divider)] last:border-0 px-4 -mx-4 transition-colors group">
+            {selectedRoleForSkills && (
+                <SkillsModal
+                    isOpen={!!selectedRoleForSkills}
+                    onClose={() => setSelectedRoleForSkills(null)}
+                    skills={selectedRoleForSkills.skills || []}
+                    title={selectedRoleForSkills.title}
+                />
+            )}
             {/* Row 1: Logo & Company Header */}
             <div className="relative flex flex-col items-center">
                 <div className="w-12 h-12 flex-shrink-0 bg-[var(--card-bg)] rounded-sm overflow-hidden relative z-10 transition-colors">
@@ -68,9 +84,30 @@ const CompanyExperience = ({ company, totalDuration, location, logo, roles }: Co
                             <span className="text-sm text-[var(--text-dim)] transition-colors">{role.date}</span>
                             {role.location && <span className="text-sm text-[var(--text-dim)] transition-colors">{role.location}</span>}
 
-                            {role.skills && (
-                                <div className="mt-3 flex items-center gap-2 text-sm text-[var(--text-main)] font-medium transition-colors">
-                                    <span>{role.skills}</span>
+                            {role.description && (
+                                <p className="mt-2 text-sm text-[var(--text-main)] whitespace-pre-line transition-colors">
+                                    {role.description}
+                                </p>
+                            )}
+
+                            {role.skills && role.skills.length > 0 && (
+                                <div className="mt-2 flex items-center gap-2 text-sm text-[var(--text-main)] font-medium transition-colors">
+                                    <FontAwesomeIcon icon={faLightbulb} className="text-[var(--text-dim)] w-3.5 h-3.5" />
+                                    <div className="flex flex-wrap items-center gap-1.5">
+                                        {role.skills.slice(0, 2).map((skill, i) => (
+                                            <span key={i}>
+                                                {skill}{i < Math.min(role.skills!.length, 2) - 1 || role.skills!.length > 2 ? ' · ' : ''}
+                                            </span>
+                                        ))}
+                                        {role.skills.length > 2 && (
+                                            <button
+                                                onClick={() => setSelectedRoleForSkills(role)}
+                                                className="text-[var(--text-dim)] hover:text-[var(--accent-color)] hover:underline transition-colors ml-0.5"
+                                            >
+                                                +{role.skills.length - 2} skills
+                                            </button>
+                                        )}
+                                    </div>
                                 </div>
                             )}
                         </div>
@@ -99,14 +136,16 @@ export default function Experience() {
                             title: "Software Development Engineer I",
                             type: "Full-time",
                             date: "Aug 2024 - Present · 1 yr 6 mos",
-                            skills: "Typescript, NestJS, Agentic Systems and +6 skills"
+                            description: "I take care of the backend of agentic system including agent orchestration, async execution, event streaming, workflows management and integrating the agents into existing NestJS microservice stack.",
+                            skills: ["Typescript", "NestJS", "Agentic Systems", "Microservices", "Event Streaming", "Workflow Management", "Backend Development", "Async Execution"]
                         },
                         {
                             title: "AI Intern",
                             type: "Internship",
                             date: "Feb 2024 - Jul 2024 · 6 mos",
                             location: "On-site",
-                            skills: "RAG, Large Language Models (LLM) and +3 skills"
+                            description: "I created a small AI based utility which could automatically parse the invoices and return the information in structured JSON format for better use. This was integrated into the core platform and was used by end users.",
+                            skills: ["RAG", "Large Language Models (LLM)", "Python", "JSON Parsing", "AI Integration"]
                         }
                     ]}
                 />
