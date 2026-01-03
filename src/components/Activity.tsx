@@ -71,39 +71,41 @@ export default function Activity() {
             </div>
 
             <div className="flex gap-4 overflow-x-auto pb-4 -mx-1 px-1 scrollbar-hide">
-                {blogs.map((blog) => (
+                {[...blogs].sort((a, b) => b.id - a.id).slice(0, 3).map((blog) => (
                     <div key={blog.id} className="border border-[var(--divider)] rounded-lg overflow-hidden flex flex-col min-w-[300px] md:min-w-[350px] bg-[var(--card-bg)] hover:shadow-md transition-all">
-                        <div className="p-3">
-                            <div className="flex items-center gap-2 mb-2 text-xs text-[var(--text-dim)]">
-                                <Image
-                                    src="/my_image.png"
-                                    alt="Om Achrekar"
-                                    width={38}
-                                    height={38}
-                                    className="rounded-full object-cover aspect-square"
-                                />
-                                <div className="flex flex-col">
-                                    <div className="flex items-center gap-1">
-                                        <span className="text-[14px] font-bold text-[var(--text-main)]">Om Achrekar</span>
+                        <Link href={`/recent-activity/${blog.slug}`} className="cursor-pointer block group">
+                            <div className="p-3">
+                                <div className="flex items-center gap-2 mb-2 text-xs text-[var(--text-dim)]">
+                                    <Image
+                                        src="/my_image.png"
+                                        alt="Om Achrekar"
+                                        width={38}
+                                        height={38}
+                                        className="rounded-full object-cover aspect-square"
+                                    />
+                                    <div className="flex flex-col">
+                                        <div className="flex items-center gap-1">
+                                            <span className="text-[14px] font-bold text-[var(--text-main)]">Om Achrekar</span>
+                                        </div>
+                                        <span className="text-[10px]">Software Development Engineer I</span>
+                                        <span className="text-[10px]">{blog.date}</span>
                                     </div>
-                                    <span className="text-[10px]">Software Development Engineer I</span>
-                                    <span className="text-[10px]">{blog.date}</span>
                                 </div>
+                                <h3 className="font-bold text-sm line-clamp-2 mb-1 text-[var(--text-main)]">{blog.title}</h3>
+                                <p className="text-xs text-[var(--text-dim)] line-clamp-3 mb-3">{blog.content}</p>
                             </div>
-                            <h3 className="font-bold text-sm line-clamp-2 mb-1 text-[var(--text-main)]">{blog.title}</h3>
-                            <p className="text-xs text-[var(--text-dim)] line-clamp-3 mb-3">{blog.content}</p>
-                        </div>
 
-                        {blog.image && (
-                            <div className="relative aspect-video w-full bg-[var(--bg-color)] transition-colors">
-                                <Image
-                                    src={blog.image}
-                                    alt={blog.title}
-                                    fill
-                                    className="object-cover"
-                                />
-                            </div>
-                        )}
+                            {blog.image && (
+                                <div className="relative aspect-video w-full bg-[var(--bg-color)] transition-colors">
+                                    <Image
+                                        src={blog.image}
+                                        alt={blog.title}
+                                        fill
+                                        className="object-cover"
+                                    />
+                                </div>
+                            )}
+                        </Link>
 
                         <div className="p-3 mt-auto">
                             <div className="flex items-center justify-between py-2 border-b border-[var(--divider)] mb-2 transition-colors">
