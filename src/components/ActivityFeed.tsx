@@ -70,7 +70,7 @@ export default function ActivityFeed() {
             </div>
 
             <div className="space-y-4">
-                {activities.map((activity) => (
+                {[...activities].sort((a, b) => b.id - a.id).map((activity) => (
                     <div key={activity.id} className="border border-[var(--divider)] rounded-xl overflow-hidden bg-[var(--card-bg)] transition-colors">
                         <div className="p-3 pb-0">
                             <div className="flex items-start justify-between">

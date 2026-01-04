@@ -72,4 +72,47 @@ I'd love to hear your thoughts on how this could be used in your projects!
         comments: 12,
         reposts: 5
     },
+    {
+        id: 3,
+        slug: "oops-for-system-design",
+        title: "From Code to Architecture: Why OOP is the DNA of System Design",
+        content: "Super excited to share something I've been working on! I built a MongoDB-powered MCP server that allows AI agents to interact with your databases more intuitively. This bridge opens up so many possibilities...",
+        fullContent: `
+When we think about **System Design**, we often jump straight to load balancers, databases, and microservices. However, before you can scale a system to millions of users, you must first define how its components interact. This is where **Object-Oriented Programming (OOP)** transitions from a coding style to a foundational design philosophy.
+
+In essence, System Design is just "Programming at Scale," and OOP provides the vocabulary needed to build it.
+
+---
+
+### 1. Classes & Objects: The Building Blocks of Services
+In system design, we don't just write functions; we define **entities**. 
+* **The Class** is your architectural blueprint (e.g., a "User Service" definition or a "Database Schema").
+* **The Object** is the actual running instance of that service or a specific record in your cache.
+
+By thinking in objects, you can break a massive, monolithic problem into smaller, manageable service components.
+
+### 2. Encapsulation: Creating "Black Boxes"
+System design relies heavily on **isolation**. Encapsulation ensures that a service (like "Payments") hides its internal logic and database structure from the rest of the system.
+* **Why it matters:** If the Payment service changes its internal logic, the "Order Service" doesn't need to be rewritten. As long as the **API (the public interface)** remains the same, the internal "private" data stays protected.
+
+### 3. Inheritance vs. Composition: Scaling Logic
+Inheritance allows us to create specialized versions of a general component. 
+* **Example:** You might have a base \`Notification\` service. Through inheritance, you create \`EmailNotification\` and \`SMSNotification\`. 
+* In high-level design, we often prefer **Composition** (putting objects together) over Inheritance to keep systems decoupled and flexible, but the mental model of shared traits begins with OOP inheritance.
+
+### 4. Polymorphism: The Key to Extensibility
+Polymorphism allows a system to remain "plug-and-play." 
+* **System Design Scenario:** Imagine your system needs to support multiple storage types (S3, Google Cloud Storage, or Azure Blob). 
+* By using polymorphism, your application logic simply calls a \`.upload()\` method. It doesn't care which cloud provider is being used at runtime; the specific implementation handles the details.
+
+### 5. Abstraction: Managing System Complexity
+Perhaps the most critical pillar for a System Architect is **Abstraction**. At a high level, you don't want to know how a Load Balancer distributes traffic at the packet level; you just need to know it balances the load.
+* **Interfaces:** By designing with interfaces (abstract contracts), you ensure that different teams can work on different parts of a system simultaneously without stepping on each other's toes.
+        `,
+        image: "https://media.istockphoto.com/id/1290154699/vector/comic-speech-bubble-with-text-oops-message-in-pop-art-style.jpg?s=612x612&w=0&k=20&c=4J-vEqvSWx-HEq8IiG5qP1WcM4Sf1xNsmXNInjMzWHY=",
+        date: "2026-01-04",
+        likes: 30,
+        comments: 2,
+        reposts: 1
+    },
 ];
