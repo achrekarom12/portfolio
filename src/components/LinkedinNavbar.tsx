@@ -87,14 +87,17 @@ export default function LinkedinNavbar() {
                     </Link>
 
                     <Link href="#" className="flex flex-col items-center justify-center min-w-[40px] md:min-w-[80px] h-[52px] text-[var(--text-dim)] hover:text-[var(--text-main)] transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false"><path d="M16 4H8a7 7 0 000 14h4v4l8.16-5.39A6.78 6.78 0 0023 11a7 7 0 00-7-7zm-8 8.25A1.25 1.25 0 119.25 11 1.25 1.25 0 018 12.25zm4 0A1.25 1.25 0 1113.25 11 1.25 1.25 0 0112 12.25zm4 0A1.25 1.25 0 1117.25 11 1.25 1.25 0 0116 12.25z"></path></svg>
+                        <div className="relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false"><path d="M16 4H8a7 7 0 000 14h4v4l8.16-5.39A6.78 6.78 0 0023 11a7 7 0 00-7-7zm-8 8.25A1.25 1.25 0 119.25 11 1.25 1.25 0 018 12.25zm4 0A1.25 1.25 0 1113.25 11 1.25 1.25 0 0112 12.25zm4 0A1.25 1.25 0 1117.25 11 1.25 1.25 0 0116 12.25z"></path></svg>
+                            <span className="absolute -top-1 -right-1 bg-[#cc1016] text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center border-2 border-[var(--nav-bg)]">12</span>
+                        </div>
                         <span className="text-[12px] mt-0.5 hidden md:block">Messaging</span>
                     </Link>
 
                     <Link href="#" className="flex flex-col items-center justify-center min-w-[40px] md:min-w-[80px] h-[52px] text-[var(--text-dim)] hover:text-[var(--text-main)] transition-colors">
                         <div className="relative">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" width="24" height="24" focusable="false"><path d="M22 19h-8.28a2 2 0 11-3.44 0H2v-1a4.52 4.52 0 011.17-2.83l1-1.17h15.7l1 1.17A4.42 4.42 0 0122 18zM18.21 7.44A6.27 6.27 0 0012 2a6.27 6.27 0 00-6.21 5.44L5 13h14z"></path></svg>
-                            <span className="absolute -top-1 -right-1 bg-[#cc1016] text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center border-2 border-[var(--nav-bg)]">1</span>
+                            <span className="absolute -top-1 -right-1 bg-[#cc1016] text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center border-2 border-[var(--nav-bg)]">10</span>
                         </div>
                         <span className="text-[12px] mt-0.5 hidden md:block">Notifications</span>
                     </Link>

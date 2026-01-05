@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/recent-activity/rag-is-a-gamechanger":{},"/recent-activity/mongodb-mcp-server":{},"/recent-activity/oops-for-system-design":{}},"dynamicRoutes":{"/recent-activity/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/recent-activity/[slug]","routeRegex":"^\\/recent\\-activity\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"b9adc65840e40b2a28c36adbaac8ac2f","previewModeSigningKey":"d9ca762e6ac2e578bfc634247987120cd35747d04c5dc01c95770731aff14c26","previewModeEncryptionKey":"a02b996f20d2c5954304dbb6b808a318e259a39a84fa5e6893580ab7c1355344"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "61f8c17f48c3faea9946ca9317c72150",
+    "previewModeSigningKey": "d07beed1ef120fac6a2ff63718aad929effebf463bea1e97c1c14114d4377d5b",
+    "previewModeEncryptionKey": "8b40f4ad1bb2a5c1bb0b09cf038792b085ba645c91041f53e9955fcfba759b0d"
+  }
+}
