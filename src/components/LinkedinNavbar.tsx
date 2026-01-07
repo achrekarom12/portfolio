@@ -37,7 +37,7 @@ export default function LinkedinNavbar() {
             <div className="container-max h-full flex items-center justify-between px-2 sm:px-0 relative">
                 <div className="flex items-center gap-2 md:flex-none">
                     <Link href="/">
-                        <svg viewBox="0 0 24 24" className="w-[34px] h-[34px] fill-[var(--accent-color)]" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" className="w-[40px] h-[40px] fill-[var(--accent-color)] [.dark_&]:fill-[#ededed]" aria-label="LinkedIn">
                             <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.22-.44-2.12-1.61-2.12a1.77 1.77 0 00-1.63 1.15.86.86 0 00-.06.42V19h-3v-9h2.9v1.3a2.89 2.89 0 012.63-1.45c1.92 0 3.37 1.28 3.37 4.02z"></path>
                         </svg>
                     </Link>
@@ -50,7 +50,7 @@ export default function LinkedinNavbar() {
                     </div>
 
                     {/* Search Bar - Desktop Only */}
-                    <div className="hidden md:block relative w-[280px]">
+                    <div className="hidden md:block relative w-[320px]">
                         <div className="absolute left-4 top-1/2 -translate-y-1/2">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" width="24" height="24" focusable="true" className="w-5 h-5 fill-[var(--text-dim)]">
                                 <path d="M21.41 18.59l-5.27-5.28A6.83 6.83 0 0017 10a7 7 0 10-7 7 6.83 6.83 0 003.31-1.09l5.28 5.27a2 2 0 002.82-2.82zM5 10a5 5 0 115 5 5 5 0 01-5-5z"></path>
@@ -59,7 +59,7 @@ export default function LinkedinNavbar() {
                         <input
                             type="text"
                             placeholder="Search"
-                            className="bg-[var(--input-bg)] h-[34px] w-full rounded-full text-sm text-[var(--text-main)] placeholder-[var(--text-dim)] border border-[var(--nav-border)] pl-10 pr-4 transition-colors duration-200 focus:outline-none focus:ring-1 focus:ring-[var(--accent-color)]"
+                            className="bg-transparent h-[34px] w-full rounded-full text-sm text-[var(--text-main)] font-semibold placeholder-[var(--text-dim)] border border-[#6f7072] dark:border-[#6f7072] pl-10 pr-4 transition-colors duration-200"
                             onFocus={() => setIsFocused(true)}
                             onBlur={() => setIsFocused(false)}
                         />
