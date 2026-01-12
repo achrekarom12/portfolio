@@ -3,6 +3,8 @@
 import Image from 'next/image';
 
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import ContactInfoModal from './ContactInfoModal';
 import OpenToModal from './OpenToModal';
 
@@ -53,7 +55,7 @@ export default function ProfileHeader() {
                                     <span>1K followers</span>
                                     <span className="mx-1">·</span>
                                     <span>500+ connections</span>
-                                </div>  
+                                </div>
                             </div>
 
                             <div className="flex flex-col gap-2 mt-4 sm:mt-0">
@@ -69,9 +71,11 @@ export default function ProfileHeader() {
                         </div>
 
                         <div className="flex flex-wrap gap-2 mt-4">
-                            <button className="btn-primary" onClick={() => setShowOpenToModal(true)}>Open to</button>
-                            <button className="btn-secondary">Add profile section</button>
-                            <button className="btn-tertiary">More</button>
+                            <button className="btn-primary">Open to</button>
+                            <button className="btn-secondary flex items-center gap-2" onClick={() => setShowOpenToModal(true)}>
+                                <FontAwesomeIcon icon={faPaperPlane} className="text-sm" />
+                                Message
+                            </button>
                         </div>
 
                         {/* Carousel: Suggested for you / Opento work / etc */}
