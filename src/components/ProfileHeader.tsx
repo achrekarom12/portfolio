@@ -43,15 +43,17 @@ export default function ProfileHeader() {
                                 </h1>
                                 <p className="text-base text-[var(--text-main)] mt-1 transition-colors">Software Development Engineer - I @Scogo.AI</p>
 
-                                <div className="text-sm text-[var(--text-dim)] mt-1 flex items-center gap-1 flex-wrap transition-colors">
+                                <div className="text-md text-[var(--text-dim)] mt-1 flex items-center gap-1 flex-wrap transition-colors">
                                     <span>Mumbai, Maharashtra, India</span>
                                     <span className="mx-1">·</span>
                                     <a href="#" onClick={(e) => { e.preventDefault(); setShowContactInfo(true); }} className="text-[var(--accent-color)] hover:underline font-semibold">Contact info</a>
                                 </div>
 
-                                <div className="text-sm text-[var(--accent-color)] font-semibold mt-2 hover:underline cursor-pointer">
-                                    500+ connections
-                                </div>
+                                <div className="text-md text-[var(--text-dim)] mt-1 flex items-center gap-1 flex-wrap transition-colors">
+                                    <span>1K followers</span>
+                                    <span className="mx-1">·</span>
+                                    <span>500+ connections</span>
+                                </div>  
                             </div>
 
                             <div className="flex flex-col gap-2 mt-4 sm:mt-0">
