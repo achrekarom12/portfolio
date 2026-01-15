@@ -68,6 +68,13 @@ export default function Projects() {
 
   const projects = [
     {
+      title: "Declutter.io",
+      duration: "Jan 2026 - Present",
+      description: "Declutter is the professional folder organizer for your PC. Smart-categorize your Downloads, Desktop, and cluttered folders into structured hierarchies instantly. Out of curiosity, I tried ElectronJS and I liked it.",
+      skills: ["Next.js", "ElectronJS", "TypeScript", "TailwindCSS", "Vercel"],
+      link: "https://declutterio.netlify.app/"
+    },
+    {
       title: "MongoDB MCP Server",
       duration: "Apr 2025",
       description: "A Model Context Protocol (MCP) server enabling large language models (LLMs) to communicate directly with MongoDB. It allows natural language to be used for database queries, schema exploration, and data operations.",
