@@ -4,11 +4,8 @@ import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faThumbsUp,
-    faCommentDots,
     faRetweet,
     faPaperPlane,
-    faPlus,
-    faPen,
     faChevronRight
 } from '@fortawesome/free-solid-svg-icons';
 import { faThumbsUp as faThumbsUpReg, faCommentDots as faCommentDotsReg } from '@fortawesome/free-regular-svg-icons';
@@ -53,7 +50,7 @@ export default function Activity({ initialActivities = [] }: { initialActivities
                 textArea.remove();
             }
             showToast("Copied to your clipboard!");
-        } catch (err) {
+        } catch {
             showToast("Failed to copy link");
         }
     };

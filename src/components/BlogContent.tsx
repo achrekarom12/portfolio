@@ -1,6 +1,5 @@
 'use client';
 
-import { use } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -15,7 +14,7 @@ import { ActivityItem } from '@/utils/hashnode';
 import LinkedinNavbar from '@/components/LinkedinNavbar';
 import { formatRelativeTime } from '@/utils/dateUtils';
 
-export default function BlogContent({ slug, initialActivity }: { slug: string, initialActivity?: ActivityItem | null }) {
+export default function BlogContent({ initialActivity }: { slug?: string, initialActivity?: ActivityItem | null }) {
     const activity = initialActivity;
 
     if (!activity) {

@@ -1,23 +1,11 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useRef, useEffect } from 'react';
 import { useTheme } from '@/components/ThemeProvider';
 
-const NavItem = ({ icon, label, active = false, href = "#" }: { icon: React.ReactNode, label: string, active?: boolean, href?: string }) => (
-    <Link href={href} className={`flex flex-col items-center justify-center cursor-pointer min-w-[80px] h-[52px] border-b-2 mr-1 ${active ? 'border-[var(--text-main)] text-[var(--text-main)]' : 'border-transparent text-[var(--text-dim)] hover:text-[var(--text-main)]'} transition-colors`}>
-        <div className="relative">
-            {icon}
-            {label === "Notifications" && (
-                <span className="absolute -top-1 -right-1 bg-[#cc1016] text-white text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center">3</span>
-            )}
-        </div>
-        <span className="text-[12px] mt-0.5 hidden md:block">{label}</span>
-    </Link>
-);
-
 export default function LinkedinNavbar() {
-    const [isFocused, setIsFocused] = useState(false);
     const [isMeOpen, setIsMeOpen] = useState(false);
     const { theme, toggleTheme } = useTheme();
     const dropdownRef = useRef<HTMLDivElement>(null);
@@ -60,8 +48,6 @@ export default function LinkedinNavbar() {
                             type="text"
                             placeholder="Search"
                             className="bg-transparent h-[34px] w-full rounded-full text-sm text-[var(--text-main)] font-semibold placeholder-[var(--text-dim)] border border-[#6f7072] dark:border-[#6f7072] pl-10 pr-4 transition-colors duration-200"
-                            onFocus={() => setIsFocused(true)}
-                            onBlur={() => setIsFocused(false)}
                         />
                     </div>
                 </div>
@@ -108,7 +94,7 @@ export default function LinkedinNavbar() {
                             className="flex flex-col items-center justify-center cursor-pointer min-w-[40px] md:min-w-[80px] h-[52px] border-b-2 border-transparent text-[var(--text-dim)] hover:text-[var(--text-main)] md:ml-1 md:border-l border-[var(--divider)] md:pl-2 transition-colors duration-200"
                         >
                             <div className="w-6 h-6 rounded-full bg-gray-300 overflow-hidden shrink-0">
-                                <img src="/my_image.png" alt="Me" className="w-full h-full object-cover" />
+                                <Image src="/my_image.png" alt="Me" width={24} height={24} className="w-full h-full object-cover" />
                             </div>
                             <div className="hidden md:flex items-center mt-0.5">
                                 <span className="text-[12px]">Me</span>
@@ -121,7 +107,7 @@ export default function LinkedinNavbar() {
                                 <div className="px-4 py-3 border-b border-[var(--divider)]">
                                     <div className="flex items-center gap-2">
                                         <div className="w-12 h-12 rounded-full overflow-hidden shrink-0">
-                                            <img src="/my_image.png" alt="Me" className="w-full h-full object-cover" />
+                                            <Image src="/my_image.png" alt="Me" width={48} height={48} className="w-full h-full object-cover" />
                                         </div>
                                         <div className="overflow-hidden">
                                             <p className="font-semibold text-sm truncate text-[var(--text-main)]">Om Achrekar</p>

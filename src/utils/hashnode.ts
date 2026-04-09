@@ -54,7 +54,7 @@ export async function getHashnodePosts(): Promise<HashnodePost[]> {
         }
 
         const data = await res.json();
-        const posts = data.data?.publication?.posts?.edges?.map((edge: any) => edge.node) || [];
+        const posts = data.data?.publication?.posts?.edges?.map((edge: { node: HashnodePost }) => edge.node) || [];
         return posts;
     } catch (error) {
         console.error('Error fetching Hashnode posts:', error);

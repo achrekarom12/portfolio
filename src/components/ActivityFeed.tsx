@@ -49,7 +49,7 @@ export default function ActivityFeed({ initialActivities = [] }: { initialActivi
                 textArea.remove();
             }
             showToast("Copied to your clipboard!");
-        } catch (err) {
+        } catch {
             showToast("Failed to copy link");
         }
     };

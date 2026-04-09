@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faXmark, faLink, faEnvelope, faCode } from '@fortawesome/free-solid-svg-icons';
+import { faXmark, faEnvelope, faCode } from '@fortawesome/free-solid-svg-icons';
 
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
