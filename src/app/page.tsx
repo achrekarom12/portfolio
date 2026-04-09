@@ -8,6 +8,7 @@ import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
 import Sidebar from '@/components/Sidebar'
 import { getHashnodePosts, mapHashnodeToActivityItem } from '@/utils/hashnode'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default async function Home() {
   const hashnodePosts = await getHashnodePosts();
