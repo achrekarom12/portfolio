@@ -75,7 +75,7 @@ export default function Activity({ initialActivities = [] }: { initialActivities
             <div className="flex gap-4 overflow-x-auto pb-4 -mx-1 px-1 scrollbar-hide">
                 {[...initialActivities].slice(0, 3).map((blog) => (
                     <div key={blog.id} className="border border-[var(--divider)] rounded-lg overflow-hidden flex flex-col min-w-[300px] md:min-w-[350px] bg-[var(--card-bg)] hover:shadow-md transition-all">
-                        <Link href={`/recent-activity/${blog.slug}`} className="cursor-pointer block group">
+                        <a href={blog.url || `/recent-activity/${blog.slug}`} target={blog.url ? "_blank" : undefined} rel={blog.url ? "noopener noreferrer" : undefined} className="cursor-pointer block group">
                             <div className="p-3">
                                 <div className="flex items-center gap-2 mb-2 text-xs text-[var(--text-dim)]">
                                     <Image
@@ -107,7 +107,7 @@ export default function Activity({ initialActivities = [] }: { initialActivities
                                     />
                                 </div>
                             )}
-                        </Link>
+                        </a>
 
                         <div className="p-3 mt-auto">
                             <div className="flex items-center justify-between py-2 border-b border-[var(--divider)] mb-2 transition-colors">

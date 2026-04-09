@@ -10,7 +10,6 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faThumbsUp as faThumbsUpReg, faCommentDots as faCommentDotsReg } from '@fortawesome/free-regular-svg-icons';
 import { ActivityItem } from '@/utils/hashnode';
-import Link from 'next/link';
 import { useToast } from './ToastProvider';
 import { formatRelativeTime } from '@/utils/dateUtils';
 
@@ -98,7 +97,7 @@ export default function ActivityFeed({ initialActivities = [] }: { initialActivi
                                 </button>
                             </div>
 
-                            <Link href={`/recent-activity/${activity.slug}`} className="block group">
+                            <a href={activity.url || `/recent-activity/${activity.slug}`} target={activity.url ? "_blank" : undefined} rel={activity.url ? "noopener noreferrer" : undefined} className="block group">
                                 <div className="mt-2 mb-3 px-1 text-[14px]">
                                     <h3 className="font-bold mb-1 text-[var(--text-main)] transition-colors">{activity.title}</h3>
                                     <p className="text-[var(--text-main)] opacity-80 whitespace-pre-wrap line-clamp-3 transition-colors">{activity.content}</p>
@@ -114,7 +113,7 @@ export default function ActivityFeed({ initialActivities = [] }: { initialActivi
                                         />
                                     </div>
                                 )}
-                            </Link>
+                            </a>
                         </div>
 
                         <div className="px-3 py-2">

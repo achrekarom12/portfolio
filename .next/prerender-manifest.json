@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/recent-activity/is-mythos-a-beginning-of-agi":{},"/recent-activity/why-aws-turning-objects-into-a-real-filesystem-changes-everything":{},"/recent-activity/exploring-opensearch-for-building-rag-solution-at-scale-why":{},"/recent-activity/basics-of-opensearch-s-query-dsl":{},"/recent-activity/why-your-next-knowledge-base-should-be-an-llm-maintained-wiki":{},"/recent-activity/why-you-should-expose-behavior-not-data":{},"/recent-activity/code-that-speaks-for-itself":{},"/recent-activity/some-more-observations-part-2":{},"/recent-activity/claude-code-leaks-and-my-observations-part-1":{},"/recent-activity/a-chaotic-day-for-axios":{}},"dynamicRoutes":{"/recent-activity/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/recent-activity/[slug]","routeRegex":"^\\/recent\\-activity\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"cd58c3254d5f362fe89d17ea54046cf5","previewModeSigningKey":"7eff8e974521da0a99df663c63c708a5635c937aad420b32bc902a25cbf7af68","previewModeEncryptionKey":"653227849c71653e07d1884631eba2149eaa573f5cdea7d37008e6cb615c64d1"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "fbfbb951a83498eb4c10e198acda268f",
+    "previewModeSigningKey": "08faab440d663906c9b04b5d0d04eb523104d41599bb4485c84de3b6b2fa6537",
+    "previewModeEncryptionKey": "6e07ae060a84fd756777ca967d97a57ae9e6194946bad7505a6445f1e4f289b6"
+  }
+}

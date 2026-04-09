@@ -114,6 +114,7 @@ export async function getHashnodePost(slug: string): Promise<HashnodePost | null
 export interface ActivityItem {
     id: number | string;
     slug: string;
+    url?: string;
     title: string;
     content: string;
     fullContent: string;
@@ -142,6 +143,7 @@ export function mapHashnodeToActivityItem(post: HashnodePost): ActivityItem {
     return {
         id: post.id,
         slug: post.slug,
+        url: `https://blogs.itsom.dev/${post.slug}`,
         title: post.title,
         content: post.brief,
         fullContent: post.content?.markdown || '',
