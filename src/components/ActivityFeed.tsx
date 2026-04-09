@@ -9,12 +9,12 @@ import {
     faEllipsisH
 } from '@fortawesome/free-solid-svg-icons';
 import { faThumbsUp as faThumbsUpReg, faCommentDots as faCommentDotsReg } from '@fortawesome/free-regular-svg-icons';
-import { activities } from '@/data/activities';
+import { ActivityItem } from '@/utils/hashnode';
 import Link from 'next/link';
 import { useToast } from './ToastProvider';
 import { formatRelativeTime } from '@/utils/dateUtils';
 
-export default function ActivityFeed() {
+export default function ActivityFeed({ initialActivities = [] }: { initialActivities?: ActivityItem[] }) {
     const { showToast } = useToast();
     const filters = ["Blogs", "Projects", "Articles", "Events"];
 
@@ -70,7 +70,7 @@ export default function ActivityFeed() {
             </div>
 
             <div className="space-y-4">
-                {[...activities].sort((a, b) => b.id - a.id).map((activity) => (
+                {[...initialActivities].map((activity) => (
                     <div key={activity.id} className="border border-[var(--divider)] rounded-xl overflow-hidden bg-[var(--card-bg)] transition-colors">
                         <div className="p-3 pb-0">
                             <div className="flex items-start justify-between">

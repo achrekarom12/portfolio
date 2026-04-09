@@ -7,8 +7,12 @@ import Education from '@/components/Education'
 import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
 import Sidebar from '@/components/Sidebar'
+import { getHashnodePosts, mapHashnodeToActivityItem } from '@/utils/hashnode'
 
-export default function Home() {
+export default async function Home() {
+  const hashnodePosts = await getHashnodePosts();
+  const activities = hashnodePosts.map(mapHashnodeToActivityItem);
+
   return (
     <div className="min-h-screen bg-[var(--bg-color)] transition-colors">
       <LinkedinNavbar />
@@ -19,7 +23,7 @@ export default function Home() {
           <main className="md:col-span-8 lg:col-span-9 space-y-2 sm:space-y-4">
             <ProfileHeader />
             <About />
-            <Activity />
+            <Activity initialActivities={activities} />
             <Experience />
             <Education />
             <Projects />

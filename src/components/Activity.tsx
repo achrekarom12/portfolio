@@ -14,12 +14,13 @@ import {
 import { faThumbsUp as faThumbsUpReg, faCommentDots as faCommentDotsReg } from '@fortawesome/free-regular-svg-icons';
 
 import Link from 'next/link';
-import { activities as blogs } from '@/data/activities';
+import { ActivityItem } from '@/utils/hashnode';
 import { useToast } from './ToastProvider';
 import { formatRelativeTime } from '@/utils/dateUtils';
 
-export default function Activity() {
+export default function Activity({ initialActivities = [] }: { initialActivities?: ActivityItem[] }) {
     const { showToast } = useToast();
+
 
     const handleLike = () => {
         showToast("Wait, this isn't the real LinkedIn... but I'll take it!");
@@ -72,7 +73,7 @@ export default function Activity() {
             </div>
 
             <div className="flex gap-4 overflow-x-auto pb-4 -mx-1 px-1 scrollbar-hide">
-                {[...blogs].sort((a, b) => b.id - a.id).slice(0, 3).map((blog) => (
+                {[...initialActivities].slice(0, 3).map((blog) => (
                     <div key={blog.id} className="border border-[var(--divider)] rounded-lg overflow-hidden flex flex-col min-w-[300px] md:min-w-[350px] bg-[var(--card-bg)] hover:shadow-md transition-all">
                         <Link href={`/recent-activity/${blog.slug}`} className="cursor-pointer block group">
                             <div className="p-3">

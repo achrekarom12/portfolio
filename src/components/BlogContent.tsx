@@ -11,12 +11,12 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import { activities } from '@/data/activities';
+import { ActivityItem } from '@/utils/hashnode';
 import LinkedinNavbar from '@/components/LinkedinNavbar';
 import { formatRelativeTime } from '@/utils/dateUtils';
 
-export default function BlogContent({ slug }: { slug: string }) {
-    const activity = activities.find((a) => a.slug === slug);
+export default function BlogContent({ slug, initialActivity }: { slug: string, initialActivity?: ActivityItem | null }) {
+    const activity = initialActivity;
 
     if (!activity) {
         return (

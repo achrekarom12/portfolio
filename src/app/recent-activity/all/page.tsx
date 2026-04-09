@@ -2,13 +2,17 @@ import LinkedinNavbar from '@/components/LinkedinNavbar';
 import ProfileMiniCard from '@/components/ProfileMiniCard';
 import ActivityFeed from '@/components/ActivityFeed';
 import PeopleYouMayKnow from '@/components/PeopleYouMayKnow';
+import { getHashnodePosts, mapHashnodeToActivityItem } from '@/utils/hashnode';
 
 export const metadata = {
     title: 'Recent Activity | Om Achrekar',
     description: 'View all recent activities and posts by Om Achrekar',
 };
 
-export default function RecentActivityPage() {
+export default async function RecentActivityPage() {
+    const hashnodePosts = await getHashnodePosts();
+    const activities = hashnodePosts.map(mapHashnodeToActivityItem);
+
     return (
         <div className="min-h-screen bg-[var(--bg-color)] transition-colors duration-200">
             <LinkedinNavbar />
@@ -22,7 +26,7 @@ export default function RecentActivityPage() {
 
                     {/* Main Content - Activity Feed (Narrower col-span-6) */}
                     <main className="col-span-1 md:col-span-8 lg:col-span-6 space-y-4">
-                        <ActivityFeed />
+                        <ActivityFeed initialActivities={activities} />
                     </main>
 
                     {/* Right Sidebar (col-span-3) */}
