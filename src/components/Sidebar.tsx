@@ -1,18 +1,41 @@
-import PeopleYouMayKnow, { SidebarItem } from './PeopleYouMayKnow';
+"use client";
+
+import PeopleYouMayKnow from './PeopleYouMayKnow';
+import GitHubCalendar from 'react-github-calendar';
+import { useTheme } from './ThemeProvider';
+
+const selectLastHalfYear = (contributions: any[]) => {
+    const currentYear = new Date().getFullYear();
+    const currentMonth = new Date().getMonth();
+    const shownMonths = 6;
+    
+    return contributions.filter((activity: any) => {
+        const date = new Date(activity.date);
+        const monthDiff = (currentYear - date.getFullYear()) * 12 + (currentMonth - date.getMonth());
+        return monthDiff < shownMonths;
+    });
+};
 
 export default function Sidebar() {
+    const { theme } = useTheme();
+
     return (
-        <div className="md:sticky md:top-[72px]">
+        <div className="md:sticky md:top-[72px] space-y-4">
             <div className="linkedin-card p-4">
                 <div className="flex justify-between items-center mb-2">
-                    <h2 className="text-base font-semibold text-[var(--text-main)] transition-colors">People also viewed</h2>
+                    <h2 className="text-base font-semibold text-[var(--text-main)] transition-colors">GitHub Contributions</h2>
                 </div>
-                <div className="space-y-1 blur-[3px] select-none pointer-events-none">
-                    <SidebarItem name="Sarah Smith" headline="Senior Software Engineer at Google | Python | React" />
-                    <SidebarItem name="David Chen" headline="Full Stack Developer @ Amazon | AWS Certified" />
-                    <SidebarItem name="Emily Davis" headline="Frontend Architect | Typography Enthusiast" />
-                    <SidebarItem name="Michael Brown" headline="Engineering Manager at Microsoft" />
-                    <SidebarItem name="Jessica Wilson" headline="Product Designer | UX/UI" />
+                <div className="w-full mt-3 flex justify-center [&_svg]:!w-full [&_svg]:!max-w-[400px]">
+                    <GitHubCalendar 
+                        username="achrekarom12" 
+                        colorScheme={theme === 'dark' ? 'dark' : 'light'}
+                        blockSize={18}
+                        blockMargin={5}
+                        blockRadius={4}
+                        fontSize={14}
+                        transformData={selectLastHalfYear}
+                        hideColorLegend={true}
+                    />
                 </div>
             </div>
 
