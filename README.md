@@ -9,7 +9,8 @@ A modern, responsive portfolio website themed after LinkedIn's iconic UI. Built 
 - **Responsive Design**: Optimized for desktop, tablet, and mobile viewing.
 - **Dynamic Content**: Auto-calculating experience durations and relative time for activities.
 - **Interactive Modals**: Contact information, skills overview, and email contact forms integrated with EmailJS.
-- **Blogging System**: Integrated blog content rendered from markdown.
+- **Hashnode Blog Integration**: Dynamically fetches and displays latest articles in the activity feed using the Hashnode GraphQL API.
+- **GitHub Heatmap**: Real-time integration of GitHub contributions directly in the sidebar using `react-github-calendar`.
 
 ## 🛠️ Tech Stack
 
@@ -18,6 +19,7 @@ A modern, responsive portfolio website themed after LinkedIn's iconic UI. Built 
 - **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
 - **Icons**: [FontAwesome](https://fontawesome.com/)
 - **Markdown**: [react-markdown](https://github.com/remarkjs/react-markdown)
+- **APIs & Integration**: Hashnode GraphQL API, [react-github-calendar](https://github.com/grubersjoe/react-github-calendar)
 - **Deployment**: [Netlify](https://www.netlify.com/)
 
 ## 🏁 Getting Started
