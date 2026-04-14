@@ -29,8 +29,20 @@ export default function ProfileHeader({ calendar }: ProfileHeaderProps) {
                     className="absolute top-0 left-0 w-full h-[200px] sm:h-[250px] overflow-hidden rounded-t-lg"
                     style={{ background: 'var(--card-bg)' }}
                 >
+                    {/* Mobile: fewer months so cells stay square */}
                     <div
-                        className="absolute inset-0 pointer-events-none select-none p-2"
+                        className="absolute inset-0 pointer-events-none select-none p-2 sm:hidden"
+                        style={{ opacity: 0.6 }}
+                    >
+                        <GitHubContributionChart
+                            calendar={calendar}
+                            colorScheme={theme === 'dark' ? 'dark' : 'light'}
+                            months={3}
+                        />
+                    </div>
+                    {/* Desktop: full 6 months */}
+                    <div
+                        className="absolute inset-0 pointer-events-none select-none p-2 hidden sm:block"
                         style={{ opacity: 0.6 }}
                     >
                         <GitHubContributionChart
