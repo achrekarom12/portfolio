@@ -74,33 +74,43 @@ export default function GitHubContributionChart({
     return (
         <div
             style={{
-                display: 'grid',
-                gridTemplateColumns: `repeat(${numCols}, 1fr)`,
-                gridTemplateRows: 'repeat(7, 1fr)',
-                gap: '4px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
                 width: '100%',
                 height: '100%',
                 overflow: 'hidden',
             }}
         >
-            {filteredWeeks.map((week, wi) =>
-                week.contributionDays.map((day) => {
-                    const level = getLevel(day.contributionCount, max);
-                    const row = getDayOfWeek(day.date); // 0=Sun .. 6=Sat
-                    return (
-                        <div
-                            key={day.date}
-                            title={`${day.date}: ${day.contributionCount} contribution${day.contributionCount !== 1 ? 's' : ''}`}
-                            style={{
-                                gridColumn: wi + 1,
-                                gridRow: row + 1,
-                                borderRadius: '3px',
-                                backgroundColor: colors[level],
-                            }}
-                        />
-                    );
-                })
-            )}
+            <div
+                style={{
+                    display: 'grid',
+                    gridTemplateColumns: `repeat(${numCols}, 1fr)`,
+                    gridTemplateRows: 'repeat(7, auto)',
+                    gap: '4px',
+                    width: '100%',
+                }}
+            >
+                {filteredWeeks.map((week, wi) =>
+                    week.contributionDays.map((day) => {
+                        const level = getLevel(day.contributionCount, max);
+                        const row = getDayOfWeek(day.date); // 0=Sun .. 6=Sat
+                        return (
+                            <div
+                                key={day.date}
+                                title={`${day.date}: ${day.contributionCount} contribution${day.contributionCount !== 1 ? 's' : ''}`}
+                                style={{
+                                    gridColumn: wi + 1,
+                                    gridRow: row + 1,
+                                    borderRadius: '3px',
+                                    backgroundColor: colors[level],
+                                    aspectRatio: '1',
+                                }}
+                            />
+                        );
+                    })
+                )}
+            </div>
         </div>
     );
 }

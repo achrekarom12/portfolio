@@ -23,15 +23,15 @@ export default function ProfileHeader({ calendar }: ProfileHeaderProps) {
         <>
             <ContactInfoModal isOpen={showContactInfo} onClose={() => setShowContactInfo(false)} />
             <OpenToModal isOpen={showOpenToModal} onClose={() => setShowOpenToModal(false)} />
-            <section className="linkedin-card relative pt-[150px] sm:pt-[200px]">
+            <section className="linkedin-card relative pt-[120px] sm:pt-[200px]">
                 {/* Banner: GitHub Contribution Chart as background */}
                 <div
-                    className="absolute top-0 left-0 w-full h-[200px] sm:h-[250px] overflow-hidden rounded-t-lg"
+                    className="absolute top-0 left-0 w-full h-[120px] sm:h-[250px] overflow-hidden rounded-t-lg"
                     style={{ background: 'var(--card-bg)' }}
                 >
-                    {/* Mobile: fewer months so cells stay square */}
+                    {/* Mobile: fewer months + shorter banner so cells stay square */}
                     <div
-                        className="absolute inset-0 pointer-events-none select-none p-2 sm:hidden"
+                        className="absolute inset-0 pointer-events-none select-none p-1 sm:hidden"
                         style={{ opacity: 0.6 }}
                     >
                         <GitHubContributionChart
@@ -68,7 +68,7 @@ export default function ProfileHeader({ calendar }: ProfileHeaderProps) {
 
                 <div className="px-6 pb-6 relative">
                     {/* Profile Picture */}
-                    <div className="absolute -top-[95px] sm:-top-[140px] left-6 border-4 border-[var(--card-bg)] rounded-full overflow-hidden w-[130px] h-[130px] sm:w-[160px] sm:h-[160px] bg-[var(--card-bg)] shadow-sm">
+                    <div className="absolute -top-[80px] sm:-top-[140px] left-6 border-4 border-[var(--card-bg)] rounded-full overflow-hidden w-[110px] h-[110px] sm:w-[160px] sm:h-[160px] bg-[var(--card-bg)] shadow-sm">
                         <Image
                             src="/my_image.png"
                             alt="Om Achrekar"
