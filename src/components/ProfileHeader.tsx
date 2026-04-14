@@ -6,21 +6,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import ContactInfoModal from './ContactInfoModal';
 import OpenToModal from './OpenToModal';
-import GitHubCalendar from 'react-github-calendar';
+import GitHubContributionChart from './GitHubContributionChart';
 import { useTheme } from './ThemeProvider';
+import { ContributionCalendar } from '@/utils/github';
 
-const selectLastHalfYear = (contributions: { date: string }[]) => {
-    const currentYear = new Date().getFullYear();
-    const currentMonth = new Date().getMonth();
-    const shownMonths = 6;
-    return contributions.filter((activity) => {
-        const date = new Date(activity.date);
-        const monthDiff = (currentYear - date.getFullYear()) * 12 + (currentMonth - date.getMonth());
-        return monthDiff < shownMonths;
-    });
-};
+interface ProfileHeaderProps {
+    calendar: ContributionCalendar | null;
+}
 
-export default function ProfileHeader() {
+export default function ProfileHeader({ calendar }: ProfileHeaderProps) {
     const [showContactInfo, setShowContactInfo] = useState(false);
     const [showOpenToModal, setShowOpenToModal] = useState(false);
     const { theme } = useTheme();
@@ -29,43 +23,33 @@ export default function ProfileHeader() {
         <>
             <ContactInfoModal isOpen={showContactInfo} onClose={() => setShowContactInfo(false)} />
             <OpenToModal isOpen={showOpenToModal} onClose={() => setShowOpenToModal(false)} />
-            <section className="linkedin-card relative pt-[100px] sm:pt-[200px]">
-                {/* Banner: GitHub Contribution Chart */}
-                <div className="absolute top-0 left-0 w-full h-[150px] sm:h-[200px] overflow-hidden rounded-t-lg"
+            <section className="linkedin-card relative pt-[150px] sm:pt-[200px]">
+                {/* Banner: GitHub Contribution Chart as background */}
+                <div
+                    className="absolute top-0 left-0 w-full h-[200px] sm:h-[250px] overflow-hidden rounded-t-lg"
                     style={{ background: 'var(--card-bg)' }}
                 >
-                    {/* Stretch SVG to fill full banner width */}
                     <div
-                        className="absolute inset-0 flex items-center justify-center pointer-events-none select-none [&_.react-activity-calendar]:!w-full [&_.react-activity-calendar]:!max-w-none [&_svg]:!w-full [&_svg]:!h-auto"
-                        style={{ opacity: 0.55 }}
+                        className="absolute inset-0 pointer-events-none select-none p-2"
+                        style={{ opacity: 0.6 }}
                     >
-                        <GitHubCalendar
-                            username="achrekarom12"
+                        <GitHubContributionChart
+                            calendar={calendar}
                             colorScheme={theme === 'dark' ? 'dark' : 'light'}
-                            blockSize={11}
-                            blockMargin={3}
-                            blockRadius={2}
-                            fontSize={11}
-                            transformData={selectLastHalfYear}
-                            hideColorLegend
-                            hideTotalCount
-                            hideMonthLabels
+                            months={6}
                         />
                     </div>
-                    {/* Edge fades — top */}
-                    <div className="absolute top-0 left-0 w-full h-6 pointer-events-none"
+                    {/* Edge fades */}
+                    <div className="absolute top-0 left-0 w-full h-10 pointer-events-none"
                         style={{ background: 'linear-gradient(to bottom, var(--card-bg), transparent)' }}
                     />
-                    {/* bottom */}
-                    <div className="absolute bottom-0 left-0 w-full h-8 pointer-events-none"
+                    <div className="absolute bottom-0 left-0 w-full h-10 pointer-events-none"
                         style={{ background: 'linear-gradient(to top, var(--card-bg), transparent)' }}
                     />
-                    {/* left */}
-                    <div className="absolute inset-y-0 left-0 w-12 pointer-events-none"
+                    <div className="absolute inset-y-0 left-0 w-16 pointer-events-none"
                         style={{ background: 'linear-gradient(to right, var(--card-bg), transparent)' }}
                     />
-                    {/* right */}
-                    <div className="absolute inset-y-0 right-0 w-12 pointer-events-none"
+                    <div className="absolute inset-y-0 right-0 w-16 pointer-events-none"
                         style={{ background: 'linear-gradient(to left, var(--card-bg), transparent)' }}
                     />
                 </div>

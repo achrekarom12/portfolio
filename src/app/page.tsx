@@ -8,11 +8,13 @@ import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
 import Sidebar from '@/components/Sidebar'
 import { getHashnodePosts, mapHashnodeToActivityItem } from '@/utils/hashnode'
+import { fetchGitHubContributions } from '@/utils/github'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default async function Home() {
   const hashnodePosts = await getHashnodePosts();
   const activities = hashnodePosts.map(mapHashnodeToActivityItem);
+  const calendar = await fetchGitHubContributions('achrekarom12');
 
   return (
     <div className="min-h-screen bg-[var(--bg-color)] transition-colors">
@@ -22,7 +24,7 @@ export default async function Home() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           {/* Main Content - Left Side */}
           <main className="md:col-span-8 lg:col-span-9 space-y-2 sm:space-y-4">
-            <ProfileHeader />
+            <ProfileHeader calendar={calendar} />
             <About />
             <Activity initialActivities={activities} />
             <Experience />
